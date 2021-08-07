@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+src/images
+.gitignore
+src/data/info.js
+.gitignore
