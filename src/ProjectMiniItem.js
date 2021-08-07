@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { withStyles } from "@material-ui/core/styles";
 
 const styles = (theme) => ({
@@ -28,7 +28,7 @@ const styles = (theme) => ({
     boxSizing: "border-box",
     transition: "transform .3s ease",
     height: "100%",
-    transform: "translateY(110%)",
+    transform: "translateY(0%)",
     display: "flex",
     textAlign: "center",
     flexDirection: "column",
@@ -79,7 +79,7 @@ function ProjectMiniItem({ id, name, summary, images, classes }) {
         </div>
         {/* // replace with link router link */}
         <div className={classes.btn}>
-          <a href="#">Click me</a>
+          <Link to={`/projects/${id}`}>Click me</Link>
         </div>
       </div>
     </div>
