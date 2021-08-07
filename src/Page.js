@@ -1,15 +1,18 @@
 import React from "react";
+import Navbar from "./Navbar";
 import ProjectList from "./ProjectList";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 const style = {
   height: "100%",
   width: "100%",
+  overflow: "hidden",
 };
 function Page(props) {
   return (
     <div style={style}>
       <BrowserRouter>
+        <Navbar />
         <Switch>
           <Route
             exact

@@ -28,7 +28,7 @@ const styles = (theme) => ({
     boxSizing: "border-box",
     transition: "transform .3s ease",
     height: "100%",
-    transform: "translateY(0%)",
+    transform: "translateY(110%)",
     display: "flex",
     textAlign: "center",
     flexDirection: "column",
