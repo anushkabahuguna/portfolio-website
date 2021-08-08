@@ -6,7 +6,6 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 const style = {
   height: "100%",
   width: "100%",
-  overflow: "hidden",
 };
 function Page(props) {
   return (
