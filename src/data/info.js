@@ -19,7 +19,7 @@ export const projects = [
       introduction:
         "Based off Flat UI Colors and Material UI Colors. Users can generate palettes with various shades of colors and copy colors to their clipboard in various formats.",
       ending:
-        "Learned how to use class components,manage state, integrate JSS styles and react-router in React.",
+        "Learned how to use class components, manage state, integrate JSS styles and react-router in React.",
     },
     summary: "An app that lets users generate color palettes.",
     webLink: "https://anushkabahuguna.github.io/react-colors-app/",
@@ -35,7 +35,7 @@ export const projects = [
     name: "Yelp Camp",
     description: {
       introduction:
-        "This project was done under the 'Web Developer Bootcamp' online course by Colt Steele. Users can create,delete, review capgrounds.",
+        "This project was done under the 'Web Developer Bootcamp' online course by Colt Steele. Users can create, delete and review campgrounds.",
       ending:
         "Learned how to implement CRUD, authentication. Used MongoDB on backend to save data to the database",
     },
@@ -53,7 +53,7 @@ export const projects = [
     name: "Jokes Generator",
     description: {
       introduction:
-        "Users can fetch new jokes and vote on jokes.The reviews and jokes gets saved to Local Storage. ",
+        "Users can fetch new jokes and vote on jokes. The reviews and jokes gets saved to Local Storage. ",
       ending:
         "Learned how to handle API calls in React. Got a better understanding with React State handling.",
     },

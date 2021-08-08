@@ -15,12 +15,30 @@ const styles = (theme) => ({
       backgroundClip: `content-box`,
     },
   },
+  "@keyframes myEffect": {
+    "0%": {
+      opacity: 0,
+      transform: "translateY(30%)",
+    },
+    "100%": {
+      opacity: 1,
+    },
+  },
+  "@keyframes myEffect2": {
+    "0%": {
+      transform: "translate(-100%,0%)",
+    },
+    "100%": {
+      transform: "translate(0,0)",
+    },
+  },
   root: {
     flexGrow: 1,
     width: "100vw",
   },
   bar: {
     boxShadow: "none",
+    // backgroundColor: "red",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -43,19 +61,23 @@ const styles = (theme) => ({
     transform: "translateY(40%)",
   },
   copyOverlay: {
+    position: "absolute",
     zIndex: "0",
     width: "100%",
-    height: "100%",
+
+    height: "100vh",
     backgroundColor: "white",
-    transition: "transform 0.6s ease-in-out",
-    transform: ` rotate(24deg) skew(-15deg) translate(-100%,0px)`,
+    transition: "transform 1s ease-in-out",
+    transform: ` rotate(24deg) skew(-15deg) translate(-170%,0px)`,
   },
   showOverlay: {
-    transition: "all 0.6s ease-in-out",
-    transform: ` rotate(0deg) skew(0deg) translate(0%,0px)`,
+    // animation: `$myEffect2 2s ease-in-out`,
+    transition: "all 1s ease-in-out",
+    transform: "translate(0%,0%)",
     zIndex: "10",
     position: "absolute",
   },
+  hideOverlay: {},
   copyMsg: {
     fontFamily: "Saol Display Regular",
     position: "fixed",
@@ -75,6 +97,8 @@ const styles = (theme) => ({
   },
   links: {
     // backgroundColor: "blue",
+    animation: `$myEffect 2s ease-in-out`,
+
     height: "100%",
     alignItems: "center",
     margin: "5rem 7rem",
@@ -143,10 +167,12 @@ const styles = (theme) => ({
     opacity: "1",
     transform: "translateY(0%)",
     zIndex: "25",
-    transition: "transform 0.5s ease-in-out,opacity 1.5s ease-in-out",
-    transitionDelay: "0.3s",
+    transition: "all 1.5s ease-in-out",
+    // transitionDelay: "4s",
   },
   cancelIcon: {
+    animation: `$myEffect 2s ease-in-out`,
+
     position: "fixed",
     top: 0,
     right: 0,

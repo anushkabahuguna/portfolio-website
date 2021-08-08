@@ -1,5 +1,11 @@
 import React from "react";
-import { AppBar, Toolbar, IconButton, Typography } from "@material-ui/core";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  CssBaseline,
+} from "@material-ui/core";
 import { withRouter } from "react-router";
 import MenuIcon from "@material-ui/icons/Menu";
 import { withStyles } from "@material-ui/core/styles";
@@ -21,7 +27,8 @@ function Navbar({ classes, history }) {
   };
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="transparent" className={classes.bar}>
+      {/* <CssBaseline /> */}
+      <AppBar position="absolute" color="transparent" className={classes.bar}>
         <Toolbar>
           <IconButton
             edge="start"
@@ -31,7 +38,7 @@ function Navbar({ classes, history }) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
+          {/* <Typography
             variant="h6"
             className={classes.title}
             style={{ textAlign: "right" }}
@@ -39,9 +46,12 @@ function Navbar({ classes, history }) {
             {title.map((t, i) => {
               return i === title.length - 1 ? `${t}` : `${t} - `;
             })}
-          </Typography>
+          </Typography> */}
         </Toolbar>
-        <div className={`${classes.copyMsg} ${open && classes.showMessage} `}>
+        <div
+          className={`${classes.copyMsg} ${open && classes.showMessage} `}
+          style={{ display: open ? "" : "none" }}
+        >
           <CancelIcon onClick={handleClose} className={classes.cancelIcon} />
 
           {/* side projects come in link */}
@@ -61,6 +71,7 @@ function Navbar({ classes, history }) {
           </div>
         </div>
         <div
+          onClick={handleOpen}
           className={`${classes.copyOverlay} ${open && classes.showOverlay} `}
         />
       </AppBar>
