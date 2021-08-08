@@ -55,7 +55,7 @@ export const projects = [
       introduction:
         "Users can fetch new jokes and vote on jokes. The reviews and jokes gets saved to Local Storage. ",
       ending:
-        "Learned how to handle API calls in React. Got a better understanding with React State handling.",
+        "Learned how to handle API calls in React. Got a better understanding of React State handling.",
     },
     summary: "An app where users can review jokes because why not?",
     webLink: "https://anushkabahuguna.github.io/dad-jokes-app/",

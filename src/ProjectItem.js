@@ -26,6 +26,14 @@ const styles = (theme) => ({
       display: "none",
     },
   },
+  "@keyframes myEffect3": {
+    "0%": {
+      opacity: 0,
+    },
+    "100%": {
+      opacity: 1,
+    },
+  },
   root: {
     height: "100vh",
     overflowY: "auto",
@@ -61,6 +69,7 @@ const styles = (theme) => ({
     color: "white",
     transform: "translateY(10rem)",
     margin: "0 auto ",
+    animation: `$myEffect3  4s  ease-in-out`,
 
     fontSize: "1.1rem",
     width: "60%",
@@ -86,7 +95,7 @@ const styles = (theme) => ({
   },
   details: {
     marginTop: "3rem",
-    marginBottom: "2rem",
+    marginBottom: "4rem",
     letterSpacing: "0.07rem",
     "&>div": {
       display: "flex",
@@ -121,6 +130,10 @@ const styles = (theme) => ({
     color: "white",
     // backgroundColor: "#123ef5",
     padding: " 0 1em",
+    transition: "all 0.3s ease-in",
+    "&:hover": {
+      color: "#f0b429",
+    },
   },
   images: {
     // backgroundColor: "red",
@@ -156,8 +169,8 @@ function ProjectItem({
   return (
     <div className={classes.root}>
       <div className={classes.overlay}>
-        {/* <div />
-        <div /> */}
+        <div />
+        <div />
       </div>
       <div className={classes.container}>
         <h1 className={classes.title}>{name}</h1>
