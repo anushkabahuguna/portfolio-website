@@ -24,12 +24,15 @@ const styles = (theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    color: "white",
   },
   title: {
     flexGrow: 1,
+    color: "white",
+    fontFamily: "Roboto,sans-serif",
+    fontWeight: "100",
   },
   paper: {
-    backgroundColor: theme.palette.background.paper,
     border: "2px solid #000",
     boxShadow: theme.shadows[5],
     backgroundColor: "rgba(255,255,255,0.9)",
@@ -40,16 +43,14 @@ const styles = (theme) => ({
     transform: "translateY(40%)",
   },
   copyOverlay: {
-    opacity: "0",
     zIndex: "0",
     width: "100%",
     height: "100%",
-    backgroundColor: "black",
+    backgroundColor: "white",
     transition: "transform 0.6s ease-in-out",
     transform: ` rotate(24deg) skew(-15deg) translate(-100%,0px)`,
   },
   showOverlay: {
-    opacity: "1",
     transition: "all 0.6s ease-in-out",
     transform: ` rotate(0deg) skew(0deg) translate(0%,0px)`,
     zIndex: "10",
@@ -117,9 +118,9 @@ const styles = (theme) => ({
     "& a:nth-of-type(even)": {
       //   backgroundColor: "black",
       transform: "translateX(60%)",
-      color: "#f7bd50",
+      color: "#1d1c1f",
       "&:hover": {
-        borderBottom: "2px solid #f7bd50",
+        borderBottom: "2px solid #1d1c1f",
       },
       [theme.breakpoints.down("xs")]: {
         transform: "translateX(0%)",
@@ -128,9 +129,9 @@ const styles = (theme) => ({
     },
     "& a:nth-of-type(odd)": {
       transform: "translateX(-60%)",
-      color: "#ecdac1",
+      color: "#1d1c1f",
       "&:hover": {
-        borderBottom: "2px solid #ecdac1",
+        borderBottom: "2px solid #1d1c1f",
       },
       [theme.breakpoints.down("xs")]: {
         transform: "translateX(0%)",
@@ -152,7 +153,7 @@ const styles = (theme) => ({
     marginTop: "1rem",
     marginRight: "3rem",
     fontSize: "3rem",
-    color: "white",
+    color: "#1d1c1f",
     cursor: "pointer",
     "&:hover": {
       color: "#f0b429",

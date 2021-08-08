@@ -1,12 +1,17 @@
 import React from "react";
 import Navbar from "./Navbar";
 import ProjectList from "./ProjectList";
+import ProjectItem from "./ProjectItem";
+import { projects } from "./data/info";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 const style = {
   height: "100%",
   width: "100%",
 };
+function findProject(id) {
+  return projects.find((project) => project.id === id);
+}
 function Page(props) {
   return (
     <div style={style}>
@@ -16,17 +21,19 @@ function Page(props) {
           <Route
             exact
             path="/projects"
-            render={(routeProps) => <ProjectList />}
+            render={() => <ProjectList projects={projects} />}
           ></Route>
           <Route
             exact
             path="/projects/:id"
-            render={(routeProps) => <h1>{routeProps.match.params.id}</h1>}
+            render={(routeProps) => (
+              <ProjectItem {...findProject(routeProps.match.params.id)} />
+            )}
           ></Route>
           <Route
             exact
             path="/"
-            render={(routeProps) => <h1>Hello this is the home page</h1>}
+            render={() => <h1>Hello this is the home page</h1>}
           ></Route>
         </Switch>
       </BrowserRouter>

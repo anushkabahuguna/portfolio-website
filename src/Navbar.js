@@ -26,7 +26,6 @@ function Navbar({ classes, history }) {
           <IconButton
             edge="start"
             className={classes.menuButton}
-            color="inherit"
             aria-label="menu"
             onClick={handleOpen}
           >
@@ -45,7 +44,7 @@ function Navbar({ classes, history }) {
         <div className={`${classes.copyMsg} ${open && classes.showMessage} `}>
           <CancelIcon onClick={handleClose} className={classes.cancelIcon} />
 
-          {/* <h1>Links</h1> */}
+          {/* side projects come in link */}
           <div className={classes.links}>
             <Link to="/" onClick={handleClose}>
               Home

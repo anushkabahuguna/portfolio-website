@@ -1,6 +1,5 @@
 import React from "react";
 import ProjectMiniItem from "./ProjectMiniItem";
-import { projects } from "./data/info";
 import { withStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 
@@ -13,7 +12,7 @@ const styles = (theme) => ({
     flexGrow: 1,
   },
   container: {
-    backgroundColor: "black",
+    // backgroundColor: "black",
     margin: "3rem auto",
     width: "85%",
     display: "flex",
@@ -22,14 +21,13 @@ const styles = (theme) => ({
   item: {},
 });
 
-function ProjectList({ classes }) {
-  const { personalProjects } = projects;
+function ProjectList({ classes, projects }) {
   return (
     <div className={classes.root}>
       {/* 10% height for navbar */}
       {/* here comes the navbar */}
       <Grid container className={classes.container} spacing={4}>
-        {personalProjects.map((project, index) => (
+        {projects.map((project, index) => (
           <Grid item lg={4} md={6} xs={12} className={classes.item} key={index}>
             <ProjectMiniItem {...project} className={classes.item} />
           </Grid>
