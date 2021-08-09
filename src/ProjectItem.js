@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { withStyles } from "@material-ui/styles";
+import { withStyles } from "@material-ui/core/styles";
 import { Divider } from "@material-ui/core/";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LanguageIcon from "@material-ui/icons/Language";
 import { Link } from "@material-ui/core";
+
 const styles = (theme) => ({
   "@keyframes myEffect": {
     "0%": {
@@ -101,6 +102,17 @@ const styles = (theme) => ({
       display: "flex",
       // backgroundColor: "grey",
       padding: "2rem 0",
+      [theme.breakpoints.down("lg")]: {
+        // fontSize: "1rem",
+        // backgroundColor: "pink",
+      },
+      [theme.breakpoints.down("md")]: {
+        fontSize: "0.9rem",
+        // backgroundColor: "orange",
+        display: "flex",
+        flexDirection: "column",
+        gap: "1rem",
+      },
       "&>div:nth-of-type(1)": {
         // backgroundColor: "red",
         minWidth: "9rem",
@@ -114,14 +126,24 @@ const styles = (theme) => ({
 
         display: "flex",
         margin: "0 2rem",
+        [theme.breakpoints.down("md")]: {
+          margin: "0",
+        },
       },
     },
   },
   tags: {
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-start",
+      gap: "1rem",
+    },
     "&>div": {
       marginRight: "3rem",
       backgroundColor: "white",
       color: "black",
+      whiteSpace: "nowrap",
       borderRadius: "28px",
       padding: "5px 15px",
     },
