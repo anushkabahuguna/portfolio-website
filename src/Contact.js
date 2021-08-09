@@ -3,19 +3,22 @@ import { withStyles } from "@material-ui/core/styles";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import useInputState from "./hooks/useInputState";
 import axios from "axios";
-import { MenuItem, Select, Button } from "@material-ui/core";
-
+import { MenuItem, Select } from "@material-ui/core";
+import MailIcon from "@material-ui/icons/Mail";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import { Link } from "@material-ui/core";
 const styles = (theme) => ({
   root: {
     fontFamily: "Roboto ,sans-serif",
-    backgroundColor: "red",
+    // backgroundColor: "red",
     margin: "6rem auto",
     color: "white",
     height: "85%",
   },
   container: {
-    backgroundColor: "#ef1234",
+    // backgroundColor: "#ef1234",
     width: "80%",
+
     height: "100%",
     margin: "0 auto",
     display: "flex",
@@ -24,7 +27,7 @@ const styles = (theme) => ({
     },
   },
   headingContainer: {
-    backgroundColor: "blue",
+    // backgroundColor: "blue",
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
@@ -36,30 +39,74 @@ const styles = (theme) => ({
 
     fontFamily: "Work Sans, sans-serif",
     "&>div": {
-      borderBottom: "12px solid white",
+      textDecoration: "underline",
+      // borderBottom: "12px solid white",
       backgroundColor: "black",
+      textUnderlineOffset: "3px",
       margin: "4rem 0",
     },
   },
   content: {
-    backgroundColor: "pink",
+    // backgroundColor: "pink",
   },
   icons: {
-    backgroundColor: "orange",
+    // backgroundColor: "orange",
     alignSelf: "flex-start",
 
+    "& a": {
+      color: "white",
+    },
     "&>div": {
       display: "flex",
-      gap: "3rem",
+      gap: "2rem",
       marginBottom: "3rem",
     },
   },
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
+  form: {
+    // backgroundColor: "orange",
+    margin: "6rem 0",
+    "& >*": {
+      // border: "2px solid black",
+      margin: "2rem 0",
+      // width: "100%",
+      padding: "0.5rem 0.5rem",
+
+      backgroundColor: "white",
+    },
+    "& >div:nth-of-type(2)": {
+      marginTop: "1rem",
+    },
   },
-  selectEmpty: {
-    marginTop: theme.spacing(2),
+  select: {
+    borderBottom: "3px solid black",
+    padding: "0.5rem 0.5rem",
+
+    height: "100%",
+    color: "black",
+    width: "100%",
+    "&>div:nth-of-type(1)": {
+      height: "100%",
+      background: "none",
+      fontSize: "1.2rem",
+      fontWeight: "bold",
+    },
+    "& svg": {
+      color: "BLACK",
+    },
+  },
+  submit: {
+    border: "none",
+    cursor: "pointer",
+    padding: "1.4rem 2rem",
+    outline: "none",
+    "&:hover": {
+      backgroundColor: "#ededeb",
+    },
+  },
+  iconLabel: {
+    // backgroundColor: "red",
+    margin: "auto 0",
+    fontSize: "0.9rem",
   },
 });
 
@@ -108,33 +155,50 @@ function Contact({ classes }) {
           </div>
           <div className={classes.icons}>
             <div>
-              <div className={classes.icon}>X</div>
+              <Link
+                href="mailto:anushkabahugunaa@gmail.com"
+                className={classes.icon}
+                target="_blank"
+              >
+                <MailIcon />
+              </Link>
               <div className={classes.iconLabel}>
                 anushkabahugunaa@gmail.com
               </div>
             </div>
             <div>
-              <div className={classes.icon}>X</div>
-              <div className={classes.iconLabel}>
-                https://github.com/anushkabahuguna
-              </div>
+              <Link
+                href="https://github.com/anushkabahuguna"
+                className={classes.icon}
+                target="_blank"
+              >
+                <GitHubIcon />
+              </Link>
+              <div className={classes.iconLabel}>anushkabahuguna</div>
             </div>
           </div>
         </div>
         <div className={classes.content}>
-          <ValidatorForm ref={inputEl} onSubmit={handleSubmit}>
+          <ValidatorForm
+            ref={inputEl}
+            onSubmit={handleSubmit}
+            className={classes.form}
+          >
             <Select
               labelId="choice-label"
               id="choice-label"
               value={workType}
               onChange={setWorkType}
+              disableUnderline={true}
               name="work-type"
+              className={classes.select}
             >
               <MenuItem value={"Web Development"}>Web Development</MenuItem>
               <MenuItem value={"Graphic Designing"}>Graphic Designing</MenuItem>
             </Select>
             <div>
               <TextValidator
+                fullWidth
                 id="name-input"
                 onChange={setName}
                 name="name"
@@ -146,6 +210,7 @@ function Contact({ classes }) {
             </div>
             <div>
               <TextValidator
+                fullWidth
                 id="email-input"
                 onChange={setEmail}
                 name="email"
@@ -157,6 +222,7 @@ function Contact({ classes }) {
             </div>
             <div>
               <TextValidator
+                fullWidth
                 id="message-input"
                 onChange={setMessage}
                 name="message"
@@ -167,7 +233,9 @@ function Contact({ classes }) {
               />
             </div>
             {/* sendgrid API for mails */}
-            <Button type="submit">Submit</Button>
+            <button type="submit" className={classes.submit}>
+              Submit
+            </button>
           </ValidatorForm>
         </div>
       </div>
