@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import ProjectList from "./ProjectList";
 import ProjectItem from "./ProjectItem";
+import Contact from "./Contact";
 import { projects } from "./data/info";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -30,6 +31,7 @@ function Page(props) {
               <ProjectItem {...findProject(routeProps.match.params.id)} />
             )}
           ></Route>
+          <Route exact path="/contact" render={() => <Contact />}></Route>
           <Route
             exact
             path="/"

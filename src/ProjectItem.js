@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { Divider } from "@material-ui/core/";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -184,10 +184,6 @@ function ProjectItem({
   classes,
 }) {
   const { introduction, ending } = description;
-  const [open, setOpen] = useState(false);
-  setTimeout(() => {
-    setOpen(true);
-  }, 1000);
   return (
     <div className={classes.root}>
       <div className={classes.overlay}>

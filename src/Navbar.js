@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  CssBaseline,
-} from "@material-ui/core";
+import { AppBar, Toolbar, IconButton } from "@material-ui/core";
 import { withRouter } from "react-router";
 import MenuIcon from "@material-ui/icons/Menu";
 import { withStyles } from "@material-ui/core/styles";
@@ -61,8 +55,9 @@ function Navbar({ classes, history }) {
 
           {/* side projects come in link */}
           <div className={classes.links}>
-            {links.map((link) => (
+            {links.map((link, index) => (
               <Link
+                key={index}
                 to={`/${link.toLowerCase()}`}
                 onClick={handleClose}
                 style={
