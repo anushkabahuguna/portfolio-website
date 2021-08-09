@@ -16,6 +16,9 @@ import styles from "./styles/NavbarStyles";
 
 function Navbar({ classes, history }) {
   const title = extractTitle(history.location.pathname);
+  if (title.length === 0) {
+    title[0] = "Home";
+  }
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
@@ -25,6 +28,8 @@ function Navbar({ classes, history }) {
   const handleClose = () => {
     setOpen(false);
   };
+  const links = ["Home", "About", "Projects", "Contact"];
+
   return (
     <div className={classes.root}>
       {/* <CssBaseline /> */}
@@ -56,18 +61,17 @@ function Navbar({ classes, history }) {
 
           {/* side projects come in link */}
           <div className={classes.links}>
-            <Link to="/" onClick={handleClose}>
-              Home
-            </Link>
-            <Link to="/about" onClick={handleClose}>
-              About
-            </Link>
-            <Link to="/projects" onClick={handleClose}>
-              Projects
-            </Link>
-            <Link to="/contact" onClick={handleClose}>
-              Contact
-            </Link>
+            {links.map((link) => (
+              <Link
+                to={`/${link.toLowerCase()}`}
+                onClick={handleClose}
+                style={
+                  link === title[0] ? { color: "#e30766" } : { color: "black" }
+                }
+              >
+                {link}
+              </Link>
+            ))}
           </div>
         </div>
         <div

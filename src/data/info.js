@@ -37,7 +37,7 @@ export const projects = [
       introduction:
         "This project was done under the 'Web Developer Bootcamp' online course by Colt Steele. Users can create, delete and review campgrounds.",
       ending:
-        "Learned how to implement CRUD, authentication. Used MongoDB on backend to save data to the database",
+        "Learned how to implement CRUD, authentication. Used MongoDB on backend to save data to the database.",
     },
     summary: "An app where users can create and review campgrounds.",
     webLink: "https://secure-savannah-90575.herokuapp.com/",
@@ -46,7 +46,7 @@ export const projects = [
     endDate: "03/09/2020",
     // array of images or one image or gifs
     images: [ycOne, ycTwo, ycThree, ycFour],
-    tags: ["Frontend", "Node/Express", "CRUD", "MongoDB", "MapBox API"],
+    tags: ["Node/Express", "CRUD", "MongoDB", "MapBox API"],
   },
   {
     id: "jokes-generator",
@@ -71,7 +71,7 @@ export const projects = [
     name: "Lights Out",
     description: {
       introduction:
-        "The goal of this game is to switch of all the lights by cliking any number of cells. Modified to add any number of rows/columns.",
+        "The goal of this game is to switch of all the lights by clicking any number of cells. Modified to add any number of rows/columns.",
       ending:
         "Apart from implementing the logic of the game, I learned how to handle events in React.",
     },

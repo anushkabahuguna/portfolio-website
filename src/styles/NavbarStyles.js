@@ -119,23 +119,25 @@ const styles = (theme) => ({
 
       [theme.breakpoints.down("lg")]: {
         fontSize: "6rem",
-
-        margin: "0 1rem",
+        "&:hover": {
+          marginLeft: "2rem",
+        },
+        // margin: "0 1rem",
       },
       [theme.breakpoints.down("md")]: {
         // backgroundColor: theme.palette.secondary.main,
         fontSize: "5rem",
-        margin: "0 2rem",
+        // margin: "0 2rem",
       },
       [theme.breakpoints.down("sm")]: {
         // backgroundColor: "yellow",
         fontSize: "3rem",
-        margin: "0 3rem",
+        // margin: "0 3rem",
       },
       [theme.breakpoints.down("xs")]: {
         transform: "translateX(0%)",
         fontSize: "3rem",
-        margin: "2rem 0",
+        // margin: "2rem 0",
       },
     },
 

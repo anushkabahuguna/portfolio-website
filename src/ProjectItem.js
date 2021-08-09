@@ -161,6 +161,7 @@ const styles = (theme) => ({
     // backgroundColor: "red",
   },
   imageHolder: {
+    overflow: "hidden",
     "& img": {
       maxWidth: "100%",
       height: "auto",
@@ -187,7 +188,6 @@ function ProjectItem({
   setTimeout(() => {
     setOpen(true);
   }, 1000);
-  console.log(images);
   return (
     <div className={classes.root}>
       <div className={classes.overlay}>
