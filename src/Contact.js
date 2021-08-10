@@ -15,6 +15,8 @@ const styles = (theme) => ({
     margin: "6rem auto",
     color: "white",
     height: "85%",
+    overflowX: "hidden",
+    overflowY: "auto",
   },
   container: {
     // backgroundColor: "#ef1234",
@@ -25,6 +27,10 @@ const styles = (theme) => ({
     display: "flex",
     "&>div": {
       flexBasis: "50%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      flexDirection: "column",
     },
   },
   headingContainer: {
@@ -42,10 +48,17 @@ const styles = (theme) => ({
     fontFamily: "Work Sans, sans-serif",
     "&>div": {
       textDecoration: "underline",
-      // borderBottom: "12px solid white",
       backgroundColor: "black",
       textUnderlineOffset: "3px",
       margin: "4rem 0",
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "4rem",
+      marginLeft: "1rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      margin: "0 auto",
+      fontSize: "5rem",
     },
   },
   content: {
@@ -63,14 +76,18 @@ const styles = (theme) => ({
       gap: "2rem",
       marginBottom: "3rem",
     },
+    [theme.breakpoints.down("md")]: {
+      marginLeft: "1rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      margin: "0 auto",
+    },
   },
   form: {
     // backgroundColor: "orange",
     margin: "6rem 0",
     "& >*": {
-      // border: "2px solid black",
       margin: "2rem 0",
-      // width: "100%",
       padding: "0.5rem 0.5rem",
 
       backgroundColor: "white",
@@ -102,7 +119,7 @@ const styles = (theme) => ({
     padding: "1.4rem 2rem",
     outline: "none",
     "&:hover": {
-      backgroundColor: "#ededeb",
+      // backgroundColor: "#ededeb",
     },
   },
   iconLabel: {
