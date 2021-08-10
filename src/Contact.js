@@ -4,7 +4,6 @@ import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import useInputState from "./hooks/useInputState";
 import axios from "axios";
 import { MenuItem, Select, Snackbar, IconButton } from "@material-ui/core";
-import CloseIcon from "@material-ui/icons/Close";
 import MailIcon from "@material-ui/icons/Mail";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import { Link } from "@material-ui/core";
@@ -126,7 +125,9 @@ function Contact({ classes }) {
   const [isSubmitted, toggleIsSubmitted] = useToggleState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
+    const date = new Date().toLocaleString();
     const obj = {
+      date,
       workType,
       name,
       email,
