@@ -1,12 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import useInputState from "./hooks/useInputState";
 import axios from "axios";
-import { MenuItem, Select } from "@material-ui/core";
+import { MenuItem, Select, Snackbar, IconButton } from "@material-ui/core";
+import CloseIcon from "@material-ui/icons/Close";
 import MailIcon from "@material-ui/icons/Mail";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import { Link } from "@material-ui/core";
+import useToggleState from "./hooks/useToggleState";
 const styles = (theme) => ({
   root: {
     fontFamily: "Roboto ,sans-serif",
@@ -28,6 +30,7 @@ const styles = (theme) => ({
   },
   headingContainer: {
     // backgroundColor: "blue",
+
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
@@ -36,7 +39,7 @@ const styles = (theme) => ({
   headings: {
     fontSize: "5rem",
     alignSelf: "flex-start",
-
+    marginLeft: "5rem",
     fontFamily: "Work Sans, sans-serif",
     "&>div": {
       textDecoration: "underline",
@@ -52,7 +55,7 @@ const styles = (theme) => ({
   icons: {
     // backgroundColor: "orange",
     alignSelf: "flex-start",
-
+    marginLeft: "5rem",
     "& a": {
       color: "white",
     },
@@ -108,6 +111,9 @@ const styles = (theme) => ({
     margin: "auto 0",
     fontSize: "0.9rem",
   },
+  snackbar: {
+    background: "none",
+  },
 });
 
 function Contact({ classes }) {
@@ -116,8 +122,8 @@ function Contact({ classes }) {
   const [email, setEmail, resetEmail] = useInputState("");
   const [name, setName, resetName] = useInputState("");
   const [message, setMessage, resetMessage] = useInputState("");
-  const [workType, setWorkType, resetWorkType] =
-    useInputState("Web Development");
+  const [workType, setWorkType] = useInputState("Web Development");
+  const [isSubmitted, toggleIsSubmitted] = useToggleState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     const obj = {
@@ -132,19 +138,13 @@ function Contact({ classes }) {
         obj
       )
       .then((response) => {
-        // console.log(response);
+        toggleIsSubmitted();
       });
     resetEmail();
     resetName();
     resetMessage();
   };
-  useEffect(() => {
-    // ValidatorForm.addValidationRule("isColorNameUnique", (value) =>
-    //   this.props.colors.every(
-    //     ({ name }) => name.toLowerCase() !== value.toLowerCase()
-    //   )
-    // );
-  });
+
   return (
     <div className={classes.root}>
       <div className={classes.container}>
@@ -226,16 +226,27 @@ function Contact({ classes }) {
                 id="message-input"
                 onChange={setMessage}
                 name="message"
+                multiline={true}
+                rows={5}
                 label="Message"
                 value={message}
-                validators={["required", "maxStringLength:100"]}
+                validators={["required", "maxStringLength:700"]}
                 errorMessages={["This field is required", "Reached max limit"]}
               />
             </div>
+
             {/* sendgrid API for mails */}
             <button type="submit" className={classes.submit}>
               Submit
             </button>
+            <Snackbar
+              className={classes.snackbar}
+              autoHideDuration={3000}
+              anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+              open={isSubmitted}
+              onClose={toggleIsSubmitted}
+              message="Submitted!"
+            />
           </ValidatorForm>
         </div>
       </div>
