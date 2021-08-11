@@ -5,6 +5,7 @@ import ProjectItem from "./ProjectItem";
 import Contact from "./Contact";
 import { projects } from "./data/info";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import About from "./About";
 
 const style = {
   height: "100%",
@@ -24,6 +25,7 @@ function Page(props) {
             path="/projects"
             render={() => <ProjectList projects={projects} />}
           ></Route>
+          <Route exact path="/about" render={() => <About />}></Route>
           <Route
             exact
             path="/projects/:id"

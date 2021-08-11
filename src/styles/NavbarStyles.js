@@ -1,5 +1,6 @@
 const styles = (theme) => ({
   "@global": {
+    scrollBehavior: "smooth",
     "*::-webkit-scrollbar": {
       width: "20px",
     },
@@ -19,6 +20,9 @@ const styles = (theme) => ({
     "0%": {
       opacity: 0,
       transform: "translateY(30%)",
+    },
+    "60%": {
+      opacity: "12%",
     },
     "100%": {
       opacity: 1,

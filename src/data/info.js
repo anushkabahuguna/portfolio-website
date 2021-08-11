@@ -10,6 +10,10 @@ const jgOne = require("../assests/images/jokes-generator/one1.jpg");
 const jgTwo = require("../assests/images/jokes-generator/two.gif");
 const loOne = require("../assests/images/lights-out/one1.jpg");
 const loTwo = require("../assests/images/lights-out/two.gif");
+const hmOne = require("../assests/images/hangman/one.jpg");
+const hmTwo = require("../assests/images/hangman/two.jpg");
+const cggOne = require("../assests/images/color-guessing-game/one.jpg");
+const cggTwo = require("../assests/images/color-guessing-game/two.gif");
 
 export const projects = [
   {
@@ -85,58 +89,39 @@ export const projects = [
     tags: ["HTML/CSS", "React"],
   },
   {
-    id: "lights-out",
-    name: "Lights Out",
+    id: "hangman",
+    name: "Hangman",
     description: {
       introduction:
-        "The goal of this game is to switch of all the lights by cliking any number of cells. Modified to add any number of rows/columns.",
+        "Hangman is a word guessing game where the player attempts to build a missing word by guessing one letter at a time. Added Hint for the letters.",
       ending:
-        "Apart from implementing the logic of the game, I learned how to handle events in React.",
+        "Apart from implementing the logic of the game, I learned how to handle states in React.",
     },
-    summary: "Clone of the 'Lights Out' game",
-    webLink: "https://anushkabahuguna.github.io/lights-out/",
-    gitHubLink: "https://github.com/anushkabahuguna/lights-out",
-    startDate: "09/06/2021",
-    endDate: "14/06/2021",
+    summary: "Clone of the 'Hangman' game",
+    webLink: "https://anushkabahuguna.github.io/hangman/",
+    gitHubLink: "https://github.com/anushkabahuguna/hangman",
+    startDate: "11/06/2021",
+    endDate: "13/06/2021",
     // array of images or one image or gifs
-    images: [loOne, loTwo],
+    images: [hmOne, hmTwo],
     tags: ["HTML/CSS", "React"],
   },
   {
-    id: "lights-out",
-    name: "Lights Out",
+    id: "color-guessing-game",
+    name: "Color Guessing Game",
     description: {
       introduction:
-        "The goal of this game is to switch of all the lights by cliking any number of cells. Modified to add any number of rows/columns.",
-      ending:
-        "Apart from implementing the logic of the game, I learned how to handle events in React.",
+        "Given a RGB value the user has to guess the respective color.",
+      ending: "I learned how to handle events in vanilla JavaScript.",
     },
-    summary: "Clone of the 'Lights Out' game",
-    webLink: "https://anushkabahuguna.github.io/lights-out/",
-    gitHubLink: "https://github.com/anushkabahuguna/lights-out",
-    startDate: "09/06/2021",
-    endDate: "14/06/2021",
+    summary: "An app to test RGB guessing skills.",
+    webLink: "https://anushkabahuguna.github.io/color_game_website/",
+    gitHubLink: "https://github.com/anushkabahuguna/color_game_website",
+    startDate: "12/04/2020",
+    endDate: "14/04/2020",
     // array of images or one image or gifs
-    images: [loOne, loTwo],
-    tags: ["HTML/CSS", "React"],
-  },
-  {
-    id: "lights-out",
-    name: "Lights Out",
-    description: {
-      introduction:
-        "The goal of this game is to switch of all the lights by cliking any number of cells. Modified to add any number of rows/columns.",
-      ending:
-        "Apart from implementing the logic of the game, I learned how to handle events in React.",
-    },
-    summary: "Clone of the 'Lights Out' game",
-    webLink: "https://anushkabahuguna.github.io/lights-out/",
-    gitHubLink: "https://github.com/anushkabahuguna/lights-out",
-    startDate: "09/06/2021",
-    endDate: "14/06/2021",
-    // array of images or one image or gifs
-    images: [loOne, loTwo],
-    tags: ["HTML/CSS", "React"],
+    images: [cggOne, cggTwo],
+    tags: ["HTML", "CSS", "JavaScript"],
   },
   {
     id: "lights-out",

@@ -23,5 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 src/images
 .gitignore
-src/data/info.js
+src/data
 .gitignore
+
