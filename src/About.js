@@ -5,21 +5,14 @@ import TimelineItem from "@material-ui/lab/TimelineItem";
 import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
 import TimelineConnector from "@material-ui/lab/TimelineConnector";
 import TimelineContent from "@material-ui/lab/TimelineContent";
-import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
-import FastfoodIcon from "@material-ui/icons/Fastfood";
-import LaptopMacIcon from "@material-ui/icons/LaptopMac";
-import HotelIcon from "@material-ui/icons/Hotel";
-import RepeatIcon from "@material-ui/icons/Repeat";
 import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
 import myImage from "./assests/images/myImage.jpg";
 import resume from "./data/resume.pdf";
 const styles = (theme) => ({
   root: {
     color: "white",
     // backgroundColor: "red",
-
     margin: "4rem 0",
     height: "90%",
     overflowX: "hidden",
@@ -40,8 +33,9 @@ const styles = (theme) => ({
     // backgroundColor: "yellow",
 
     flexBasis: "30%",
+    margin: "auto 0",
     "& img": {
-      width: "350px",
+      width: "300px",
       height: "auto",
       margin: "auto",
       borderRadius: "28px",
@@ -71,14 +65,15 @@ const styles = (theme) => ({
       width: "200px",
       height: "1px",
       marginLeft: "100px",
-      // backgroundColor: "#ccd6f6",
+      backgroundColor: "#ccd6f6",
       boxSizing: "inherit",
     },
   },
   summaryContent: {
     // backgroundColor: "hotpink",
-    marginTop: "3rem",
+    marginTop: "2rem",
     fontSize: "1rem",
+    letterSpacing: ".06rem",
     wordSpacing: "0.2rem",
     color: "#ccd6f6",
     lineHeight: "1.8rem",
@@ -123,11 +118,11 @@ const styles = (theme) => ({
     textAlign: "center",
   },
   eduHeading: {
-    // backgroundColor: "teal",
+    backgroundColor: "teal",
     textTransform: "uppercase",
     whiteSpace: "nowrap",
     whiteSpace: "nowrap",
-    fontSize: "2.8rem",
+    fontSize: "2rem",
     letterSpacing: ".1rem",
     fontFamily: "Raleway,sans-serif",
     fontWeight: "600",
@@ -183,10 +178,34 @@ const styles = (theme) => ({
     borderColor: "#0091EA",
   },
   oddItem: {
-    marginRight: "2.5rem",
+    marginRight: "2rem",
     "&>div:first-child": {
-      marginLeft: "1rem",
+      flexBasis: "70%",
+      marginLeft: "5rem",
     },
+  },
+  lastSection: {
+    backgroundColor: "blue",
+    display: "flex",
+    "&>div": {
+      flexBasis: "50%",
+    },
+    margin: "5rem auto",
+    width: "95%",
+  },
+  skillsContainer: {
+    backgroundColor: "orange",
+  },
+  skills: {
+    backgroundColor: "purple",
+    marginTop: "2rem",
+  },
+  servicesContainer: {
+    backgroundColor: "pink",
+  },
+  services: {
+    backgroundColor: "green",
+    marginTop: "2rem",
   },
 });
 
@@ -278,6 +297,18 @@ function About({ classes }) {
                 </TimelineContent>
               </TimelineItem>
             </Timeline>
+          </div>
+        </div>
+        <div className={classes.lastSection}>
+          <div className={classes.skillsContainer}>
+            <div className={classes.eduHeading}>Skills</div>
+            <div className={classes.skills}>
+              <div className={classes.trial}></div>
+            </div>
+          </div>
+          <div className={classes.servicesContainer}>
+            <div className={classes.eduHeading}>Services</div>
+            <div className={classes.services}>hjnsd</div>
           </div>
         </div>
       </div>
