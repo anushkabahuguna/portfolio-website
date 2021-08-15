@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import ProjectList from "./ProjectList";
 import ProjectItem from "./ProjectItem";
 import Contact from "./Contact";
-import { projects } from "./data/info";
+import { projects, services } from "./data/info";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import About from "./About";
 
@@ -25,7 +25,11 @@ function Page(props) {
             path="/projects"
             render={() => <ProjectList projects={projects} />}
           ></Route>
-          <Route exact path="/about" render={() => <About />}></Route>
+          <Route
+            exact
+            path="/about"
+            render={() => <About services={services} />}
+          ></Route>
           <Route
             exact
             path="/projects/:id"

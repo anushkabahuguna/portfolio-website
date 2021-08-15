@@ -14,6 +14,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-google-sheets": "^0.4.0",
+    "react-in-viewport": "^1.0.0-alpha.19",
     "react-material-ui-form-validator": "^2.1.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",

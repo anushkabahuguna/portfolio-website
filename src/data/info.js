@@ -14,7 +14,9 @@ const hmOne = require("../assests/images/hangman/one.jpg");
 const hmTwo = require("../assests/images/hangman/two.jpg");
 const cggOne = require("../assests/images/color-guessing-game/one.jpg");
 const cggTwo = require("../assests/images/color-guessing-game/two.gif");
-
+const reactLogo = require("../assests/images/logos/react.svg");
+const nodeLogo = require("../assests/images/logos/node.svg");
+const graphicLogo = require("../assests/images/logos/g.svg");
 export const projects = [
   {
     id: "color-palette-generator",
@@ -140,5 +142,20 @@ export const projects = [
     // array of images or one image or gifs
     images: [loOne, loTwo],
     tags: ["HTML/CSS", "React"],
+  },
+];
+
+export const services = [
+  {
+    title: "Front-End React",
+    logo: reactLogo,
+  },
+  {
+    title: "Node.js Web App",
+    logo: nodeLogo,
+  },
+  {
+    title: "Graphic Designing",
+    logo: graphicLogo,
   },
 ];

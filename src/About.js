@@ -1,6 +1,7 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Skills from "./Skills";
+import Services from "./Services";
 import Timeline from "@material-ui/lab/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
 import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
@@ -90,9 +91,10 @@ const styles = (theme) => ({
     lineHeight: "50px",
     color: "#000000",
     fontSize: "15px",
-    fontWeight: "400",
+    fontWeight: "700",
     borderRadius: "0px",
     padding: "0 20px",
+    letterSpacing: "0.1rem",
     minWidth: "140px",
     outline: "none",
     cursor: "pointer",
@@ -120,16 +122,19 @@ const styles = (theme) => ({
   },
   eduHeading: {
     // backgroundColor: "teal",
+    color: "#E1F5FE",
     textTransform: "uppercase",
     whiteSpace: "nowrap",
-    fontSize: "2rem",
+    fontSize: "1.5rem",
     letterSpacing: ".2rem",
+    textAlign: "center",
     fontFamily: "Raleway,sans-serif",
-    fontWeight: "600",
+    fontWeight: "700",
   },
   eduTimeline: {
     // backgroundColor: "seagreen",
     width: "70%",
+
     margin: "1rem auto",
   },
   paper: {
@@ -195,6 +200,12 @@ const styles = (theme) => ({
   },
   skillsContainer: {
     // backgroundColor: "orange",
+    //heading
+    "&>div:first-child": {
+      // backgroundColor: "red",
+      margin: "0 auto",
+      width: "80%",
+    },
   },
   skills: {
     // backgroundColor: "pink",
@@ -202,15 +213,22 @@ const styles = (theme) => ({
     width: "80%",
   },
   servicesContainer: {
-    backgroundColor: "pink",
+    // backgroundColor: "pink",
+    //heading
+    "&>div:first-child": {
+      // backgroundColor: "red",
+      margin: "0 auto",
+      width: "80%",
+    },
   },
   services: {
-    backgroundColor: "green",
-    marginTop: "2rem",
+    // backgroundColor: "green",
+    height: "100%",
+    margin: " auto",
   },
 });
 
-function About({ classes }) {
+function About({ classes, services }) {
   return (
     <div className={classes.root}>
       <div className={classes.container}>
@@ -309,7 +327,9 @@ function About({ classes }) {
           </div>
           <div className={classes.servicesContainer}>
             <div className={classes.eduHeading}>Services</div>
-            <div className={classes.services}>hjnsd</div>
+            <div className={classes.services}>
+              <Services services={services} />
+            </div>
           </div>
         </div>
       </div>
