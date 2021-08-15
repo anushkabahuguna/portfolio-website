@@ -1,5 +1,6 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
+import Skills from "./Skills";
 import Timeline from "@material-ui/lab/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
 import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
@@ -118,12 +119,11 @@ const styles = (theme) => ({
     textAlign: "center",
   },
   eduHeading: {
-    backgroundColor: "teal",
+    // backgroundColor: "teal",
     textTransform: "uppercase",
     whiteSpace: "nowrap",
-    whiteSpace: "nowrap",
     fontSize: "2rem",
-    letterSpacing: ".1rem",
+    letterSpacing: ".2rem",
     fontFamily: "Raleway,sans-serif",
     fontWeight: "600",
   },
@@ -185,7 +185,7 @@ const styles = (theme) => ({
     },
   },
   lastSection: {
-    backgroundColor: "blue",
+    // backgroundColor: "blue",
     display: "flex",
     "&>div": {
       flexBasis: "50%",
@@ -194,11 +194,12 @@ const styles = (theme) => ({
     width: "95%",
   },
   skillsContainer: {
-    backgroundColor: "orange",
+    // backgroundColor: "orange",
   },
   skills: {
-    backgroundColor: "purple",
-    marginTop: "2rem",
+    // backgroundColor: "pink",
+    margin: "2rem auto",
+    width: "80%",
   },
   servicesContainer: {
     backgroundColor: "pink",
@@ -215,7 +216,7 @@ function About({ classes }) {
       <div className={classes.container}>
         <div className={classes.topContent}>
           <div className={classes.imageHolder}>
-            <img alt="my-photo" src={myImage} />
+            <img alt="profile img" src={myImage} />
           </div>
           <div className={classes.summaryBox}>
             <div className={classes.topHeading}>About Me</div>
@@ -303,7 +304,7 @@ function About({ classes }) {
           <div className={classes.skillsContainer}>
             <div className={classes.eduHeading}>Skills</div>
             <div className={classes.skills}>
-              <div className={classes.trial}></div>
+              <Skills />
             </div>
           </div>
           <div className={classes.servicesContainer}>
