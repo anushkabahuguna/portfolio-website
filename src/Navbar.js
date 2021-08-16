@@ -26,7 +26,6 @@ function Navbar({ classes, history }) {
 
   return (
     <div className={classes.root}>
-      {/* <CssBaseline /> */}
       <AppBar position="absolute" color="transparent" className={classes.bar}>
         <Toolbar>
           <IconButton
@@ -48,7 +47,7 @@ function Navbar({ classes, history }) {
           </Typography> */}
         </Toolbar>
         <div
-          className={`${classes.copyMsg} ${open && classes.showMessage} `}
+          className={`${classes.cMsg} ${open && classes.showMessage} `}
           style={{ display: open ? "" : "none" }}
         >
           <CancelIcon onClick={handleClose} className={classes.cancelIcon} />
@@ -61,7 +60,7 @@ function Navbar({ classes, history }) {
                 to={`/${link.toLowerCase()}`}
                 onClick={handleClose}
                 style={
-                  link === title[0] ? { color: "#e30766" } : { color: "black" }
+                  link === title[0] ? { color: "#01579B" } : { color: "black" }
                 }
               >
                 {link}
@@ -71,7 +70,7 @@ function Navbar({ classes, history }) {
         </div>
         <div
           onClick={handleOpen}
-          className={`${classes.copyOverlay} ${open && classes.showOverlay} `}
+          className={`${classes.cOverlay} ${open && classes.showOverlay} `}
         />
       </AppBar>
     </div>

@@ -63,13 +63,13 @@ const styles = (theme) => ({
     height: "500px",
     transform: "translateY(40%)",
   },
-  copyOverlay: {
+  cOverlay: {
     position: "absolute",
     zIndex: "0",
     width: "100%",
 
     height: "100vh",
-    backgroundColor: "white",
+    backgroundColor: "#E1F5FE",
     transition: "transform 1s ease-in-out",
     transform: ` rotate(24deg) skew(-15deg) translate(-170%,0px)`,
   },
@@ -81,7 +81,7 @@ const styles = (theme) => ({
     position: "absolute",
   },
   hideOverlay: {},
-  copyMsg: {
+  cMsg: {
     fontFamily: "Saol Display Regular",
     position: "fixed",
     // backgroundColor: "red",
@@ -187,7 +187,7 @@ const styles = (theme) => ({
     color: "#1d1c1f",
     cursor: "pointer",
     "&:hover": {
-      color: "#f0b429",
+      color: "#01579B",
     },
     [theme.breakpoints.down("xs")]: {
       transform: "translateX(0%)",
