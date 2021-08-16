@@ -11,6 +11,7 @@ const styles = {
     // backgroundColor: "#fcfcfc",
     display: "flex",
     flexDirection: "column",
+    overflow: "hidden",
   },
   singleBox: {
     // backgroundColor: "red",

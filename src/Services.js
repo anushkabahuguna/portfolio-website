@@ -7,9 +7,7 @@ import { Grid } from "@material-ui/core";
 const styles = (theme) => ({
   root: {
     height: "100%",
-    overflow: "scroll",
-    // backgroundColor: "red",
-    overflowX: "hidden",
+    overflow: "hidden",
     display: "flex",
     overflowY: "auto",
     margin: "auto 0",
@@ -17,7 +15,7 @@ const styles = (theme) => ({
   },
   container: {
     // backgroundColor: "black",
-
+    overflow: "hidden",
     width: "85%",
     height: "70%",
     display: "flex",
@@ -28,6 +26,7 @@ const styles = (theme) => ({
     // backgroundColor: "yellow",
     // margin: "auto 1rem",
     display: "flex",
+    // width: "fit-content",
     flexDirection: "column",
     alignItems: "center",
   },

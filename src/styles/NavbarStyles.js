@@ -2,17 +2,16 @@ const styles = (theme) => ({
   "@global": {
     scrollBehavior: "smooth",
     "*::-webkit-scrollbar": {
-      width: "20px",
+      width: "8px",
     },
     "*::-webkit-scrollbar-track": {
       "-webkit-box-shadow": "inset 0 0 6px rgba(0,0,0,0.00)",
-      backgroundColor: "#e4e4e4",
+      background: "none",
       borderRadius: `100px`,
     },
     "*::-webkit-scrollbar-thumb": {
-      backgroundColor: "#8070d4",
+      backgroundColor: "#ccd6f6",
       borderRadius: `100px`,
-      border: "5px solid transparent",
       backgroundClip: `content-box`,
     },
   },
