@@ -64,7 +64,7 @@ const styles = (theme) => ({
     color: "white",
     transform: "translateY(10rem)",
     margin: "0 auto ",
-    animation: `$myEffect3  4s  ease-in-out`,
+    // animation: `$myEffect3  4s  ease-in-out`,
 
     fontSize: "1.1rem",
     width: "60%",

@@ -4,17 +4,18 @@ import ProjectList from "./ProjectList";
 import ProjectItem from "./ProjectItem";
 import Contact from "./Contact";
 import { projects, services } from "./data/info";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
 import About from "./About";
 
 const style = {
   height: "100%",
   width: "100%",
 };
+
 function findProject(id) {
   return projects.find((project) => project.id === id);
 }
-function Page(props) {
+function Page() {
   return (
     <div style={style}>
       <BrowserRouter>
@@ -37,7 +38,9 @@ function Page(props) {
               <ProjectItem {...findProject(routeProps.match.params.id)} />
             )}
           ></Route>
-          <Route exact path="/contact" render={() => <Contact />}></Route>
+          <Route exact path="/contact">
+            <Contact />
+          </Route>
           <Route
             exact
             path="/"

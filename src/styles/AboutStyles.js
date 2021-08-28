@@ -58,8 +58,8 @@ const styles = (theme) => ({
       width: "260px",
       height: "auto",
       padding: "0.3rem",
-
-      border: "2px solid #03A9F4",
+      filter: `sepia(69%) saturate(200%) hue-rotate(170deg) brightness(101%) contrast(96%)`,
+      border: "2px solid #ba86ba",
       transition: "all 0.3s ease-in",
       borderRadius: "50%",
       boxShadow: "4px 7px 5px 0px rgba(0,0,0,1)",

@@ -8,6 +8,11 @@ import CancelIcon from "@material-ui/icons/Cancel";
 import { Link } from "react-router-dom";
 import styles from "./styles/NavbarStyles";
 
+const screenStyle = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
 function Navbar({ classes, history }) {
   const title = extractTitle(history.location.pathname);
   if (title.length === 0) {
@@ -60,7 +65,9 @@ function Navbar({ classes, history }) {
                 to={`/${link.toLowerCase()}`}
                 onClick={handleClose}
                 style={
-                  link === title[0] ? { color: "#01579B" } : { color: "black" }
+                  link === title[0]
+                    ? { color: "#01579B", ...screenStyle }
+                    : { color: "black", ...screenStyle }
                 }
               >
                 {link}

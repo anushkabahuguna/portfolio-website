@@ -5,8 +5,8 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LanguageIcon from "@material-ui/icons/Language";
 import { Link } from "@material-ui/core";
 import styles from "./styles/ProjectItemStyles";
-
 function ProjectItem({
+  classes,
   description,
   startDate,
   endDate,
@@ -17,7 +17,6 @@ function ProjectItem({
   summary,
   tags,
   webLink,
-  classes,
 }) {
   const { introduction, ending } = description;
   return (

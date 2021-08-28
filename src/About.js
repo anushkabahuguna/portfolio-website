@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import myImage from "./assests/images/myImage.jpg";
 import resume from "./data/resume.pdf";
 import styles from "./styles/AboutStyles";
-
 function About({ classes, services }) {
   return (
     <div className={classes.root}>
