@@ -1,0 +1,63 @@
+@keyframes left-anim {
+    0% {
+        opacity: 0;
+        transform: translateX(-40%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes right-anim {
+    0% {
+        opacity: 0;
+        transform: translateX(40%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes bottom-anim {
+    0% {
+        opacity: 0;
+        transform: translateY(60%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.Services {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Services-Animate {
+    opacity: 1;
+}
+
+.Services-left-animate {
+    animation: left-anim 2s;
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.Services-right-animate {
+    animation: right-anim 2s;
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.Services-bottom-animate {
+    animation: bottom-anim 2s;
+    transform: translateY(0%);
+    opacity: 1;
+}

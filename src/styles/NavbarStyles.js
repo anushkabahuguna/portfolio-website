@@ -69,7 +69,7 @@ const styles = (theme) => ({
     width: "100%",
 
     height: "100vh",
-    backgroundColor: "#E1F5FE",
+    backgroundColor: "#ebeeff",
     transition: "transform 1s ease-in-out",
     transform: ` rotate(24deg) skew(-15deg) translate(-170%,0px)`,
   },
@@ -187,7 +187,7 @@ const styles = (theme) => ({
     color: "#1d1c1f",
     cursor: "pointer",
     "&:hover": {
-      color: "#01579B",
+      color: "#303F9F",
     },
     [theme.breakpoints.down("xs")]: {
       transform: "translateX(0%)",

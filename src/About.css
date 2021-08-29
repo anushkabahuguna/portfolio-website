@@ -1,0 +1,24 @@
+@keyframes anim1 {
+    0% {
+        transform: translateY(200%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+
+    }
+}
+
+.heading {
+    transform: translateY(200%);
+    opacity: 0;
+}
+
+.animation1 {
+    animation: anim1 1s;
+    opacity: 1;
+    transform: translateY(0%);
+
+}

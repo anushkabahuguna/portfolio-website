@@ -66,7 +66,7 @@ function Navbar({ classes, history }) {
                 onClick={handleClose}
                 style={
                   link === title[0]
-                    ? { color: "#01579B", ...screenStyle }
+                    ? { color: "#303F9F", ...screenStyle }
                     : { color: "black", ...screenStyle }
                 }
               >

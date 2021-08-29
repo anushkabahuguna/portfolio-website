@@ -1,0 +1,22 @@
+@keyframes anim {
+    0% {
+        transform: translateY(30%);
+        opacity: 0
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1
+    }
+}
+
+.root {
+    transform: translateY(30%);
+    opacity: 0;
+}
+
+.animation {
+    animation: anim 1s;
+    opacity: 1;
+    transform: translateY(0%);
+}

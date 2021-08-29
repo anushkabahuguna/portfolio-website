@@ -19,7 +19,7 @@ const styles = (theme) => ({
 
       flexBasis: "30%",
       fontSize: "2rem",
-      color: "#03A9F4",
+      color: "#4FC3F7",
       fontWeight: "600",
       letterSpacing: "0.2rem",
       [theme.breakpoints.down("sm")]: {
