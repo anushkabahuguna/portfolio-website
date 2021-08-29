@@ -15,16 +15,56 @@ const styles = (theme) => ({
       backgroundClip: `content-box`,
     },
   },
-  "@keyframes myEffect": {
+  "@keyframes myEffecteven": {
     "0%": {
       opacity: 0,
-      transform: "translateY(30%)",
+      transform: "translateX(130%)",
     },
     "60%": {
       opacity: "12%",
     },
     "100%": {
       opacity: 1,
+      transform: "translateX(60%)",
+    },
+  },
+  "@keyframes myEffecteven-s": {
+    "0%": {
+      opacity: 0,
+      transform: "translateX(130%)",
+    },
+    "60%": {
+      opacity: "12%",
+    },
+    "100%": {
+      opacity: 1,
+      transform: "translateX(0%)",
+    },
+  },
+  "@keyframes myEffectodd": {
+    "0%": {
+      opacity: 0,
+      transform: "translateX(-130%)",
+    },
+    "60%": {
+      opacity: "12%",
+    },
+    "100%": {
+      opacity: 1,
+      transform: "translateX(-60%)",
+    },
+  },
+  "@keyframes myEffectodd-s": {
+    "0%": {
+      opacity: 0,
+      transform: "translateX(-130%)",
+    },
+    "60%": {
+      opacity: "12%",
+    },
+    "100%": {
+      opacity: 1,
+      transform: "translateX(0%)",
     },
   },
   "@keyframes myEffect2": {
@@ -100,7 +140,7 @@ const styles = (theme) => ({
   },
   links: {
     // backgroundColor: "blue",
-    animation: `$myEffect 2s ease-in-out`,
+    // animation: `$myEffect 2s ease-in-out`,
 
     height: "100%",
     alignItems: "center",
@@ -146,6 +186,7 @@ const styles = (theme) => ({
 
     "& a:nth-of-type(even)": {
       //   backgroundColor: "black",
+      animation: `$myEffecteven 2s ease-in-out`,
       transform: "translateX(60%)",
       color: "#1d1c1f",
       "&:hover": {
@@ -153,11 +194,15 @@ const styles = (theme) => ({
       },
       [theme.breakpoints.down("xs")]: {
         transform: "translateX(0%)",
+
+        animation: `$myEffecteven-s 2s ease-in-out`,
+
         fontSize: "3rem",
       },
     },
     "& a:nth-of-type(odd)": {
       transform: "translateX(-60%)",
+      animation: `$myEffectodd 2s ease-in-out`,
       color: "#1d1c1f",
       "&:hover": {
         borderBottom: "2px solid #1d1c1f",
@@ -165,9 +210,11 @@ const styles = (theme) => ({
       [theme.breakpoints.down("xs")]: {
         transform: "translateX(0%)",
         fontSize: "3rem",
+        animation: `$myEffectodd-s 2s ease-in-out`,
       },
     },
   },
+
   showMessage: {
     opacity: "1",
     transform: "translateY(0%)",

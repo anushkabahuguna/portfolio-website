@@ -61,6 +61,7 @@ function Navbar({ classes, history }) {
           <div className={classes.links}>
             {links.map((link, index) => (
               <Link
+                className={classes.link}
                 key={index}
                 to={`/${link.toLowerCase()}`}
                 onClick={handleClose}
