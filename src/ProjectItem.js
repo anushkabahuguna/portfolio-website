@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { Divider } from "@material-ui/core/";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LanguageIcon from "@material-ui/icons/Language";
 import { Link } from "@material-ui/core";
 import styles from "./styles/ProjectItemStyles";
+import useOnScreen from "./utils/useOnScreen";
+
 function ProjectItem({
   classes,
   description,
@@ -19,11 +21,16 @@ function ProjectItem({
   webLink,
 }) {
   const { introduction, ending } = description;
+  const ref = useRef(0);
+  const setAnimation = () => {
+    ref.current.classList.add(`form-animatiossn`);
+  };
+  const onFormScreen = useOnScreen(ref);
   return (
-    <div className={classes.root}>
+    <div className={classes.root} ref={ref}>
       <div className={classes.overlay}>
-        {/* <div />
-        <div /> */}
+        <div />
+        <div />
       </div>
       <div className={classes.container}>
         <h1 className={classes.title}>{name}</h1>

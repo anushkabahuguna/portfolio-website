@@ -6,7 +6,7 @@ import Contact from "./Contact";
 import { projects, services } from "./data/info";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import About from "./About";
-
+import Home from "./Home";
 const style = {
   height: "100%",
   width: "100%",
@@ -41,11 +41,7 @@ function Page() {
           <Route exact path="/contact">
             <Contact />
           </Route>
-          <Route
-            exact
-            path="/"
-            render={() => <h1>Hello this is the home page</h1>}
-          ></Route>
+          <Route exact path="/" component={Home}></Route>
         </Switch>
       </BrowserRouter>
     </div>

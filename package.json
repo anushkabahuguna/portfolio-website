@@ -16,10 +16,12 @@
     "react-google-sheets": "^0.4.0",
     "react-in-viewport": "^1.0.0-alpha.19",
     "react-material-ui-form-validator": "^2.1.4",
+    "react-particles-js": "^3.5.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-spring": "^9.2.4",
     "react-transition-group": "^4.4.2",
+    "tsparticles": "^1.34.0",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

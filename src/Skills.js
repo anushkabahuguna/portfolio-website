@@ -10,7 +10,6 @@ import styles from "./styles/SkillsStyles";
 const Skills = ({ classes }) => {
   const ref = useRef(0);
   const setAnimation = () => {
-    ref.current.classList.add(`skills-animation`);
     setEightyTimer();
     setSixtyTimer();
     setFourtyTimer();

@@ -30,7 +30,10 @@ function Navbar({ classes, history }) {
   const links = ["Home", "About", "Projects", "Contact"];
 
   return (
-    <div className={classes.root}>
+    <div
+      className={classes.root}
+      style={{ display: title[0] === "Home" ? "none" : "" }}
+    >
       <AppBar position="absolute" color="transparent" className={classes.bar}>
         <Toolbar>
           <IconButton
@@ -63,7 +66,7 @@ function Navbar({ classes, history }) {
               <Link
                 className={classes.link}
                 key={index}
-                to={`/${link.toLowerCase()}`}
+                to={`/${link === "Home" ? `` : `${link.toLowerCase()}`}`}
                 onClick={handleClose}
                 style={
                   link === title[0]
