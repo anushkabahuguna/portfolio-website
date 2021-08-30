@@ -25,7 +25,7 @@ function Services({ classes, services }) {
     }
   };
   return (
-    <div class="Services" ref={ref2}>
+    <div className="Services" ref={ref2}>
       {onScreen ? (
         <div className={classes.root}>
           <Grid container className={classes.container} spacing={4}>

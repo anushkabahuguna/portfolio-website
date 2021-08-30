@@ -20,7 +20,7 @@ const styles = (theme) => ({
       flexBasis: "30%",
       fontSize: "2rem",
       color: "#4FC3F7",
-      fontWeight: "600",
+      fontWeight: "800",
       letterSpacing: "0.2rem",
       [theme.breakpoints.down("sm")]: {
         marginBottom: "1rem",
@@ -35,6 +35,7 @@ const styles = (theme) => ({
     marginLeft: "2rem",
     display: "flex",
     textAlign: "left",
+    fontWeight: "700",
     flexDirection: "column",
     // whiteSpace: "nowrap",
     letterSpacing: "0.07rem",
@@ -64,7 +65,7 @@ const styles = (theme) => ({
     borderColor: "#0091EA",
   },
   oddItem: {
-    marginRight: "2rem",
+    marginRight: "1.7rem",
     [theme.breakpoints.down("sm")]: {
       marginRight: "0",
     },

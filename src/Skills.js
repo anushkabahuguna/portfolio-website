@@ -1,65 +1,32 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useRef } from "react";
 import { withStyles } from "@material-ui/core/styles";
-import handleViewport from "react-in-viewport";
 import useProgressState from "./hooks/useProgressState";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-const styles = {
-  root: {
-    // backgroundColor: "#fcfcfc",
-    display: "flex",
-    flexDirection: "column",
-    overflow: "hidden",
-  },
-  singleBox: {
-    // backgroundColor: "red",
-    margin: "1rem 0",
-    display: "flex",
-    flexDirection: "column",
-  },
-  progress: {
-    // backgroundColor: "orange",
-    background: "none",
-    height: "10px",
-    borderRadius: "10px",
-    color: "white",
-    margin: " auto 0",
+import useOnScreen from "./utils/useOnScreen";
+import styles from "./styles/SkillsStyles";
 
-    // bar color
-    "&>div:first-child": {
-      backgroundColor: "#4FC3F7",
-      borderRadius: "10px",
-    },
-  },
-  texts: {
-    // backgroundColor: "orchid",
-    display: "flex",
-    justifyContent: "space-between",
-    margin: "0.5rem 0",
-  },
-  txt: {
-    // backgroundColor: "yellow",
-    color: "#ccd6f6",
-
-    textAlign: "right",
-    fontWeight: "600",
-  },
-};
-
-const Block = (props) => {
-  const { inViewport, classes, forwardedRef } = props;
+const Skills = ({ classes }) => {
+  const ref = useRef(0);
+  const setAnimation = () => {
+    ref.current.classList.add(`skills-animation`);
+    setEightyTimer();
+    setSixtyTimer();
+    setFourtyTimer();
+    setTwentyTimer();
+  };
+  const onScreen = useOnScreen(ref);
   const [eighty, setEightyTimer] = useProgressState(80);
   const [sixty, setSixtyTimer] = useProgressState(60);
   const [fourty, setFourtyTimer] = useProgressState(40);
   const [twenty, setTwentyTimer] = useProgressState(20);
   return (
-    <div className="viewport-block" ref={forwardedRef}>
-      {inViewport ? (
+    <div ref={ref}>
+      {onScreen ? (
         <Box alignItems="center" className={classes.root}>
           <Box width="100%" mr={4} className={classes.singleBox}>
-            {setEightyTimer()}
+            {setAnimation()}
             <div className={classes.texts}>
               <Typography
                 className={classes.txt}
@@ -76,13 +43,11 @@ const Block = (props) => {
             </div>
             <LinearProgress
               variant="determinate"
-              {...props}
               value={eighty}
               className={classes.progress}
             />
           </Box>
           <Box width="100%" mr={4} className={classes.singleBox}>
-            {setEightyTimer()}
             <div className={classes.texts}>
               <Typography
                 className={classes.txt}
@@ -99,13 +64,11 @@ const Block = (props) => {
             </div>
             <LinearProgress
               variant="determinate"
-              {...props}
               value={eighty}
               className={classes.progress}
             />
           </Box>
           <Box width="100%" mr={4} className={classes.singleBox}>
-            {setSixtyTimer()}
             <div className={classes.texts}>
               <Typography
                 className={classes.txt}
@@ -122,13 +85,11 @@ const Block = (props) => {
             </div>
             <LinearProgress
               variant="determinate"
-              {...props}
               value={sixty}
               className={classes.progress}
             />
           </Box>
           <Box width="100%" mr={4} className={classes.singleBox}>
-            {setFourtyTimer()}
             <div className={classes.texts}>
               <Typography
                 className={classes.txt}
@@ -145,13 +106,11 @@ const Block = (props) => {
             </div>
             <LinearProgress
               variant="determinate"
-              {...props}
               value={fourty}
               className={classes.progress}
             />
           </Box>
           <Box width="100%" mr={4} className={classes.singleBox}>
-            {setFourtyTimer()}
             <div className={classes.texts}>
               <Typography
                 className={classes.txt}
@@ -168,13 +127,11 @@ const Block = (props) => {
             </div>
             <LinearProgress
               variant="determinate"
-              {...props}
               value={fourty}
               className={classes.progress}
             />
           </Box>
           <Box width="100%" mr={4} className={classes.singleBox}>
-            {setTwentyTimer()}
             <div className={classes.texts}>
               <Typography
                 className={classes.txt}
@@ -191,13 +148,11 @@ const Block = (props) => {
             </div>
             <LinearProgress
               variant="determinate"
-              {...props}
               value={twenty}
               className={classes.progress}
             />
           </Box>
           <Box width="100%" mr={4} className={classes.singleBox}>
-            {setTwentyTimer()}
             <div className={classes.texts}>
               <Typography
                 className={classes.txt}
@@ -214,36 +169,16 @@ const Block = (props) => {
             </div>
             <LinearProgress
               variant="determinate"
-              {...props}
               value={twenty}
               className={classes.progress}
             />
           </Box>
         </Box>
       ) : (
-        <div>loading</div>
+        <div>loading...</div>
       )}
     </div>
   );
 };
-Block.propTypes = {
-  /**
-   * The value of the progress indicator for the determinate and buffer variants.
-   * Value between 0 and 100.
-   */
-  value: PropTypes.number.isRequired,
-};
-Block.defaultProps = {};
-const ViewportBlock = handleViewport(Block /** options: {}, config: {} **/);
 
-const MySection = (props) => {
-  return (
-    <ViewportBlock
-      {...props}
-      // onEnterViewport={() => console.log("enter")}
-      // onLeaveViewport={() => console.log("leave")}
-    ></ViewportBlock>
-  );
-};
-
-export default withStyles(styles)(MySection);
+export default withStyles(styles)(Skills);

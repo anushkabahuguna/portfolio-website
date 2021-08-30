@@ -128,6 +128,7 @@ const styles = (theme) => ({
     wordSpacing: "0.2rem",
     color: "#ccd6f6",
     lineHeight: "1.8rem",
+    fontWeight: "400",
     "&>div:first-child": {
       // backgroundColor: "red",
     },

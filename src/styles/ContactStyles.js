@@ -72,8 +72,10 @@ const styles = (theme) => ({
     // backgroundColor: "orange",
     alignSelf: "flex-start",
     marginLeft: "5rem",
+
     "& a": {
       color: "#ccd6f6",
+
       padding: " 0.4rem 1rem",
       transition: "all 0.2s ease-in",
       border: "2px dashed transparent",
@@ -84,7 +86,7 @@ const styles = (theme) => ({
     "&>div": {
       display: "flex",
       gap: "2rem",
-      marginBottom: "3rem",
+      marginBottom: "1rem",
     },
 
     [theme.breakpoints.down("md")]: {
@@ -92,6 +94,15 @@ const styles = (theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       margin: "0 auto",
+    },
+  },
+  icon: {
+    "&>svg": {
+      width: "1.3rem",
+      transition: "all 0.3s ease-in",
+      "&:hover": {
+        color: "#4FC3F7",
+      },
     },
   },
   form: {
@@ -141,7 +152,7 @@ const styles = (theme) => ({
   iconLabel: {
     // backgroundColor: "red",
     margin: "auto 0",
-    fontSize: "0.85rem",
+    fontSize: "0.8rem",
     letterSpacing: "0.09rem",
   },
   snackbar: {
