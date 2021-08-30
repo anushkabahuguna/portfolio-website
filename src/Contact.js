@@ -9,10 +9,16 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import { Link } from "@material-ui/core";
 import useToggleState from "./hooks/useToggleState";
 import styles from "./styles/ContactStyles";
+import useOnScreen from "./utils/useOnScreen";
+import "./Contact.css";
 
 function Contact({ classes }) {
   const inputEl = useRef("form");
-
+  const formRef = useRef(0);
+  const setAnimation = () => {
+    formRef.current.classList.add(`form-animation`);
+  };
+  const onFormScreen = useOnScreen(formRef);
   const [email, setEmail, resetEmail] = useInputState("");
   const [name, setName, resetName] = useInputState("");
   const [message, setMessage, resetMessage] = useInputState("");
@@ -74,76 +80,168 @@ function Contact({ classes }) {
             </div>
           </div>
         </div>
-        <div className={classes.content}>
-          <ValidatorForm
-            ref={inputEl}
-            onSubmit={handleSubmit}
-            className={classes.form}
-          >
-            <Select
-              labelId="choice-label"
-              id="choice-label"
-              value={workType}
-              onChange={setWorkType}
-              disableUnderline={true}
-              name="work-type"
-              className={classes.select}
-            >
-              <MenuItem value={"Web Development"}>Web Development</MenuItem>
-              <MenuItem value={"Graphic Designing"}>Graphic Designing</MenuItem>
-            </Select>
-            <div>
-              <TextValidator
-                fullWidth
-                id="name-input"
-                onChange={setName}
-                name="name"
-                value={name}
-                label="Full Name"
-                validators={["required"]}
-                errorMessages={["This field is required"]}
-              />
-            </div>
-            <div>
-              <TextValidator
-                fullWidth
-                id="email-input"
-                onChange={setEmail}
-                name="email"
-                label="Email"
-                value={email}
-                validators={["required", "isEmail"]}
-                errorMessages={["This field is required", "Email is not valid"]}
-              />
-            </div>
-            <div>
-              <TextValidator
-                fullWidth
-                id="message-input"
-                onChange={setMessage}
-                name="message"
-                multiline={true}
-                rows={5}
-                label="Message"
-                value={message}
-                validators={["required", "maxStringLength:700"]}
-                errorMessages={["This field is required", "Reached max limit"]}
-              />
-            </div>
+        <div ref={formRef} className="Contact">
+          <div className={classes.content}>
+            {onFormScreen ? (
+              <ValidatorForm
+                ref={inputEl}
+                onSubmit={handleSubmit}
+                className={classes.form}
+              >
+                {setAnimation()}
+                <Select
+                  labelId="choice-label"
+                  id="choice-label"
+                  value={workType}
+                  onChange={setWorkType}
+                  disableUnderline={true}
+                  name="work-type"
+                  className={classes.select}
+                >
+                  <MenuItem value={"Web Development"}>Web Development</MenuItem>
+                  <MenuItem value={"Graphic Designing"}>
+                    Graphic Designing
+                  </MenuItem>
+                </Select>
+                <div>
+                  <TextValidator
+                    fullWidth
+                    id="name-input"
+                    onChange={setName}
+                    name="name"
+                    value={name}
+                    label="Full Name"
+                    validators={["required"]}
+                    errorMessages={["This field is required"]}
+                  />
+                </div>
+                <div>
+                  <TextValidator
+                    fullWidth
+                    id="email-input"
+                    onChange={setEmail}
+                    name="email"
+                    label="Email"
+                    value={email}
+                    validators={["required", "isEmail"]}
+                    errorMessages={[
+                      "This field is required",
+                      "Email is not valid",
+                    ]}
+                  />
+                </div>
+                <div>
+                  <TextValidator
+                    fullWidth
+                    id="message-input"
+                    onChange={setMessage}
+                    name="message"
+                    multiline={true}
+                    rows={5}
+                    label="Message"
+                    value={message}
+                    validators={["required", "maxStringLength:700"]}
+                    errorMessages={[
+                      "This field is required",
+                      "Reached max limit",
+                    ]}
+                  />
+                </div>
 
-            {/* sendgrid API for mails */}
-            <button type="submit" className={classes.submit}>
-              Submit
-            </button>
-            <Snackbar
-              className={classes.snackbar}
-              autoHideDuration={3000}
-              anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-              open={isSubmitted}
-              onClose={toggleIsSubmitted}
-              message="Submitted!"
-            />
-          </ValidatorForm>
+                {/* sendgrid API for mails */}
+                <button type="submit" className={classes.submit}>
+                  Submit
+                </button>
+                <Snackbar
+                  className={classes.snackbar}
+                  autoHideDuration={3000}
+                  anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+                  open={isSubmitted}
+                  onClose={toggleIsSubmitted}
+                  message="Submitted!"
+                />
+              </ValidatorForm>
+            ) : (
+              <ValidatorForm
+                ref={inputEl}
+                onSubmit={handleSubmit}
+                className={classes.form}
+                style={{ opacity: 0 }}
+              >
+                <Select
+                  labelId="choice-label"
+                  id="choice-label"
+                  value={workType}
+                  onChange={setWorkType}
+                  disableUnderline={true}
+                  name="work-type"
+                  className={classes.select}
+                >
+                  <MenuItem value={"Web Development"}>Web Development</MenuItem>
+                  <MenuItem value={"Graphic Designing"}>
+                    Graphic Designing
+                  </MenuItem>
+                </Select>
+                <div>
+                  <TextValidator
+                    fullWidth
+                    id="name-input"
+                    onChange={setName}
+                    name="name"
+                    value={name}
+                    label="Full Name"
+                    validators={["required"]}
+                    errorMessages={["This field is required"]}
+                  />
+                </div>
+                <div>
+                  <TextValidator
+                    fullWidth
+                    id="email-input"
+                    onChange={setEmail}
+                    name="email"
+                    label="Email"
+                    value={email}
+                    validators={["required", "isEmail"]}
+                    errorMessages={[
+                      "This field is required",
+                      "Email is not valid",
+                    ]}
+                  />
+                </div>
+                <div>
+                  <TextValidator
+                    fullWidth
+                    id="message-input"
+                    onChange={setMessage}
+                    name="message"
+                    multiline={true}
+                    rows={5}
+                    label="Message"
+                    value={message}
+                    validators={["required", "maxStringLength:700"]}
+                    errorMessages={[
+                      "This field is required",
+                      "Reached max limit",
+                    ]}
+                  />
+                </div>
+
+                {/* sendgrid API for mails */}
+                <button type="submit" className={classes.submit}>
+                  Submit
+                </button>
+                <Snackbar
+                  className={classes.snackbar}
+                  autoHideDuration={3000}
+                  anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+                  open={isSubmitted}
+                  onClose={toggleIsSubmitted}
+                  message="Submitted!"
+                />
+              </ValidatorForm>
+            )}
+          </div>
         </div>
       </div>
     </div>

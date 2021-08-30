@@ -1,4 +1,14 @@
 const styles = (theme) => ({
+  "@keyframes left-anim ": {
+    " 0%": {
+      opacity: 0,
+      transform: `translateX(-40%)`,
+    },
+    "100%": {
+      opacity: 1,
+      transform: `translateX(0%)`,
+    },
+  },
   root: {
     fontFamily: "Roboto ,sans-serif",
     // backgroundColor: "red",
@@ -30,6 +40,7 @@ const styles = (theme) => ({
     flexDirection: "column",
     justifyContent: "flex-start",
     gap: "2rem",
+    animation: "left-anim 1s",
   },
   headings: {
     fontSize: "5rem",

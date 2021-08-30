@@ -1,0 +1,8 @@
+.Contact {
+    opacity: 0;
+}
+
+.form-animation {
+    opacity: 1;
+    animation: right-anim 1s;
+}
