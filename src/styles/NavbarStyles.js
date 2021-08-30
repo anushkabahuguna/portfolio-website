@@ -15,6 +15,17 @@ const styles = (theme) => ({
       backgroundClip: `content-box`,
     },
   },
+  "@keyframes myEffect": {
+    "0%": {
+      opacity: 0,
+    },
+    "60%": {
+      opacity: "12%",
+    },
+    "100%": {
+      opacity: 1,
+    },
+  },
   "@keyframes myEffecteven": {
     "0%": {
       opacity: 0,
@@ -140,7 +151,6 @@ const styles = (theme) => ({
   },
   links: {
     // backgroundColor: "blue",
-    // animation: `$myEffect 2s ease-in-out`,
 
     height: "100%",
     alignItems: "center",

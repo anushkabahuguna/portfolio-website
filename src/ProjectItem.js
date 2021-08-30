@@ -42,8 +42,8 @@ function ProjectItem({
           <div>
             <div>Technologies</div>
             <div className={classes.tags}>
-              {tags.map((t) => (
-                <div>{t}</div>
+              {tags.map((t, index) => (
+                <div key={index}>{t}</div>
               ))}
             </div>
           </div>
@@ -65,8 +65,8 @@ function ProjectItem({
           <Divider className={classes.divider} />
         </div>
         <div className={classes.images}>
-          {images.map((image) => (
-            <div className={classes.imageHolder}>
+          {images.map((image, index) => (
+            <div className={classes.imageHolder} key={index}>
               <img src={image.default} alt={name} />
             </div>
           ))}
