@@ -56,10 +56,13 @@ const styles = (theme) => ({
     [theme.breakpoints.down("xs")]: {
       width: "80%",
     },
+    "@media only screen and (max-width: 360px)": {
+      top: "25%",
+    },
   },
   topHeadings: {
     // backgroundColor: "pink",
-    whiteSpace: "nowrap",
+
     "&::before": {
       content: "''",
       display: `block`,
@@ -76,12 +79,19 @@ const styles = (theme) => ({
     [theme.breakpoints.down("xs")]: {
       fontSize: "0.8rem",
     },
+    "@media only screen and (max-width: 455px)": {
+      fontSize: "0.6rem",
+    },
   },
   heading: {
     letterSpacing: "0.3rem",
     textTransform: `uppercase`,
     animation: "$changeOpacity 3s",
     whiteSpace: "no-wrap",
+    "@media only screen and (max-width: 455px)": {
+      marginBottom: "2rem",
+      marginTop: "1.7rem",
+    },
   },
   des: {
     fontWeight: "300",
@@ -104,6 +114,9 @@ const styles = (theme) => ({
       animation: "$increaseWidth 2s",
       [theme.breakpoints.down("xs")]: {
         bottom: "65%",
+      },
+      "@media only screen and (max-width: 455px)": {
+        bottom: "55%",
       },
     },
   },

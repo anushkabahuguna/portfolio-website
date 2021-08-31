@@ -5,9 +5,15 @@ import Particles from "react-particles-js";
 import { particlesData3 } from "./assests/particles";
 // import { Link } from "react-router-dom";
 import { Link } from "react-tiger-transition";
+import { useThemeContext } from "./contexts/theme.context";
+
 function Home({ classes }) {
+  const { globalState, dispatch } = useThemeContext();
+  const { isDarkTheme } = globalState;
   return (
     <div className={classes.root}>
+      {console.log(isDarkTheme)}
+
       <div style={{ position: "relative" }}>
         <Particles params={particlesData3} />
       </div>

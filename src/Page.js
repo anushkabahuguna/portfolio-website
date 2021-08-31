@@ -4,7 +4,8 @@ import ProjectList from "./ProjectList";
 import ProjectItem from "./ProjectItem";
 import Contact from "./Contact";
 import { projects, services } from "./data/info";
-import { Switch, BrowserRouter, Route as ProjectRoute } from "react-router-dom";
+// import { Switch, BrowserRouter, Route } from "react-router-dom";
+import { Switch, Route as ProjectRoute } from "react-router-dom";
 import { Navigation, Route, glide, fade, scale } from "react-tiger-transition";
 import "react-tiger-transition/styles/main.min.css";
 
