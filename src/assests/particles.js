@@ -2,7 +2,7 @@ export const particlesData3 = {
   autoPlay: true,
   background: {
     color: {
-      value: "#ffffff",
+      value: "#0a192f",
     },
   },
   backgroundMask: {
@@ -15,7 +15,7 @@ export const particlesData3 = {
         },
       },
     },
-    enable: true,
+    enable: false,
   },
   fullScreen: {
     enable: true,
