@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link } from "react-tiger-transition";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/ProjectMiniItemStyles";
 
@@ -16,7 +17,9 @@ function ProjectMiniItem({ id, name, summary, images, classes }) {
         </div>
         {/* // replace with link router link */}
         <div className={classes.btn}>
-          <Link to={`/projects/${id}`}>Click me</Link>
+          <Link to={`/projects/${id}`} transition="default-fade">
+            Click me
+          </Link>
         </div>
       </div>
     </div>

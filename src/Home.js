@@ -17,15 +17,15 @@ function Home({ classes }) {
           <div className={classes.des}>Web Developer | Graphic Designer</div>
         </div>
         <div className={classes.links}>
-          <Link to="/about" transition="default-fade">
+          <Link to="/about" transition="scaleUp">
             About
           </Link>
 
-          <Link to="/projects" transition="default-fade">
+          <Link to="/projects" transition="scaleUp">
             Projects
           </Link>
 
-          <Link to="/contact" transition="default-fade">
+          <Link to="/contact" transition="scaleUp">
             Contact
           </Link>
         </div>

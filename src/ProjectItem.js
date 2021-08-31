@@ -24,8 +24,8 @@ function ProjectItem({
   return (
     <div className={classes.root}>
       <div className={classes.overlay}>
-        <div />
-        <div />
+        {/* <div />
+        <div /> */}
       </div>
       <div className={classes.container}>
         <h1 className={classes.title}>{name}</h1>

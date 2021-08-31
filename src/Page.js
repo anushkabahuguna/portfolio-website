@@ -4,7 +4,7 @@ import ProjectList from "./ProjectList";
 import ProjectItem from "./ProjectItem";
 import Contact from "./Contact";
 import { projects, services } from "./data/info";
-import { Switch, BrowserRouter } from "react-router-dom";
+import { Switch, BrowserRouter, Route as ProjectRoute } from "react-router-dom";
 import { Navigation, Route, glide, fade, scale } from "react-tiger-transition";
 import "react-tiger-transition/styles/main.min.css";
 
@@ -15,21 +15,22 @@ const style = {
   width: "100%",
 };
 glide({
-  name: "ls-f",
+  name: "glide-f",
+  direction: "left",
   enter: {
     duration: 600,
-    easing: "ease-in",
+    easing: "ease",
+    opacity: 0.3,
     zIndex: 1,
-    opacity: 0,
-    scale: 1,
+    delay: 0,
+    scale: 0.6,
   },
   exit: {
     duration: 600,
-    easing: "ease-in",
-    opacity: 0,
+    easing: "ease",
+    opacity: 1,
     zIndex: 2,
     delay: 0,
-    scale: 1,
   },
 });
 fade({
@@ -64,22 +65,22 @@ function findProject(id) {
 function Page() {
   return (
     <div style={style}>
-      <Navbar />
       <Switch>
         <Navigation>
+          <Navbar />
           <Route exact path="/projects">
             <ProjectList projects={projects} />
           </Route>
           <Route exact path="/about">
             <About services={services} />
           </Route>
-          <Route
+          <ProjectRoute
             exact
             path="/projects/:id"
             render={(routeProps) => (
               <ProjectItem {...findProject(routeProps.match.params.id)} />
             )}
-          ></Route>
+          ></ProjectRoute>
           <Route exact path="/contact">
             <Contact />
           </Route>

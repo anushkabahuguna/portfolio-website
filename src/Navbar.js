@@ -5,8 +5,9 @@ import MenuIcon from "@material-ui/icons/Menu";
 import { withStyles } from "@material-ui/core/styles";
 import { extractTitle } from "./utils/extractTitle";
 import CancelIcon from "@material-ui/icons/Cancel";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import styles from "./styles/NavbarStyles";
+import { Link } from "react-tiger-transition";
 
 const screenStyle = {
   display: "flex",
@@ -65,6 +66,7 @@ function Navbar({ classes, history }) {
             {links.map((link, index) => (
               <Link
                 className={classes.link}
+                transition="scaleUp"
                 key={index}
                 to={`/${link === "Home" ? `` : `${link.toLowerCase()}`}`}
                 onClick={handleClose}

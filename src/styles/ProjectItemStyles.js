@@ -28,6 +28,20 @@ const styles = (theme) => ({
       opacity: 1,
     },
   },
+  "@keyframes headingEffect": {
+    "0%": {
+      opacity: 0,
+
+      transform: `translateZ(-300px) translateY(-200px)`,
+    },
+    "40%": {
+      opacity: 0.6,
+    },
+    "100%": {
+      opacity: 1,
+      filter: `blur(0)`,
+    },
+  },
   root: {
     height: "100vh",
     overflowY: "auto",
@@ -64,7 +78,7 @@ const styles = (theme) => ({
     color: "white",
     transform: "translateY(10rem)",
     margin: "0 auto ",
-    animation: `$myEffect3  4s  ease-in-out`,
+    animation: `$myEffect3  3s  ease-in-out`,
 
     fontSize: "1.1rem",
     width: "60%",
@@ -76,6 +90,8 @@ const styles = (theme) => ({
     fontSize: "3.5rem",
     color: "#4FC3F7",
     letterSpacing: "0.2rem",
+    animation: "$headingEffect 1s",
+    opacity: 1,
   },
   description: {
     // backgroundColor: "red",
@@ -84,6 +100,7 @@ const styles = (theme) => ({
     marginTop: "2rem",
     lineHeight: "1.5rem",
     letterSpacing: "0.09rem",
+
     "& p ": {
       margin: "1rem auto",
     },
