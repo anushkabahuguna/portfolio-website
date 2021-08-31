@@ -5,14 +5,7 @@ import ProjectItem from "./ProjectItem";
 import Contact from "./Contact";
 import { projects, services } from "./data/info";
 import { Switch, BrowserRouter } from "react-router-dom";
-import {
-  Navigation,
-  Route,
-  glide,
-  fade,
-  rise,
-  scale,
-} from "react-tiger-transition";
+import { Navigation, Route, glide, fade, scale } from "react-tiger-transition";
 import "react-tiger-transition/styles/main.min.css";
 
 import About from "./About";
