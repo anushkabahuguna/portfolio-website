@@ -1,4 +1,6 @@
-const styles = (theme) => ({
+import { makeStyles } from "@material-ui/core/styles";
+
+const styles = makeStyles((theme) => ({
   paper: {
     background: "none",
     // backgroundColor: "orange",
@@ -15,11 +17,13 @@ const styles = (theme) => ({
     //year heading
     "&>div:first-child": {
       // backgroundColor: "beige",
+      textShadow: (isDarkTheme) =>
+        isDarkTheme ? "none" : `0 0 18px rgba(0, 0, 0, 0.35)`,
       margin: "auto",
 
       flexBasis: "30%",
       fontSize: "2rem",
-      color: "#4FC3F7",
+      color: (isDarkTheme) => (isDarkTheme ? "#4FC3F7" : "#01579B"),
       fontWeight: "800",
       letterSpacing: "0.2rem",
       [theme.breakpoints.down("sm")]: {
@@ -29,7 +33,7 @@ const styles = (theme) => ({
     },
   },
   eduContent: {
-    color: "#ccd6f6",
+    color: (isDarkTheme) => (isDarkTheme ? "#ccd6f6" : "#233554"),
     // backgroundColor: "azure",
     flexBasis: "70%",
     marginLeft: "2rem",
@@ -47,8 +51,9 @@ const styles = (theme) => ({
     // degree name
     "&>div:first-child": {
       // backgroundColor: "brown",
+
       fontSize: "1rem",
-      color: "white",
+      color: (isDarkTheme) => (isDarkTheme ? "#fcfcfc" : "#111211"),
     },
     //content
     "&>div:nth-of-type(2)": {
@@ -62,7 +67,7 @@ const styles = (theme) => ({
     },
   },
   dot: {
-    borderColor: "#0091EA",
+    borderColor: (isDarkTheme) => (isDarkTheme ? "#0091EA" : "#01578c"),
   },
   oddItem: {
     marginRight: "1.7rem",
@@ -82,5 +87,5 @@ const styles = (theme) => ({
       },
     },
   },
-});
+}));
 export default styles;

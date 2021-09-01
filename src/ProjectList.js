@@ -9,6 +9,7 @@ const delay = 250;
 
 function ProjectList({ classes, projects }) {
   const AnimatedGrid = animated(Grid);
+
   const getDelay = (index) => {
     return {
       delay: delay * index + 100,
@@ -19,7 +20,7 @@ function ProjectList({ classes, projects }) {
     projects.map((item, index) => ({
       to: { opacity: 1 },
       from: { opacity: 0 },
-      reset: true,
+      reset: false,
       reverse: false,
       delay: getDelay(index).delay,
       config: { frequency: 4 },

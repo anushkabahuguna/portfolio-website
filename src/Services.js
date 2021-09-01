@@ -1,11 +1,13 @@
 import React, { useRef, useMemo } from "react";
-import { withStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 import useOnScreen from "./utils/useOnScreen";
 import styles from "./styles/ServicesStyles";
+import { useStore } from "./contexts/theme.context";
 import "./Services.css";
 
-function Services({ classes, services }) {
+function Services({ services }) {
+  const { isDarkTheme } = useStore();
+  const classes = styles(isDarkTheme);
   const inputRefs = useMemo(
     () =>
       Array(3)
@@ -82,4 +84,4 @@ function Services({ classes, services }) {
   );
 }
 
-export default withStyles(styles)(Services);
+export default Services;

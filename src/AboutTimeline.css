@@ -1,6 +1,6 @@
 @keyframes anim {
     0% {
-        transform: translateY(30%);
+        transform: translateY(40%);
         opacity: 0
     }
 
@@ -11,7 +11,7 @@
 }
 
 .root {
-    transform: translateY(30%);
+    transform: translateY(40%);
     opacity: 0;
 }
 

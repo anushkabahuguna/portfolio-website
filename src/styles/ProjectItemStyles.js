@@ -1,4 +1,6 @@
-const styles = (theme) => ({
+import { makeStyles } from "@material-ui/core/styles";
+
+const styles = makeStyles((theme) => ({
   "@keyframes myEffect": {
     "0%": {
       top: "0",
@@ -56,26 +58,26 @@ const styles = (theme) => ({
       width: "50vw",
       height: "100vh",
     },
-    "& div:nth-of-type(1)": {
-      background: `url(https://images.unsplash.com/photo-1515387784663-e2e29a23f69e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80)`,
-      animation: `$myEffect 3s ease-in-out`,
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center",
-      backgroundSize: "cover",
-    },
-    "& div:nth-of-type(2)": {
-      background:
-        "url(https://images.unsplash.com/photo-1528460033278-a6ba57020470?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80)",
-      transform: "translateX(100%)",
-      // backgroundColor: "orange",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center",
-      backgroundSize: "cover",
-      animation: `$myEffect2 3s ease-in-out`,
-    },
+    // "& div:nth-of-type(1)": {
+    //   background: `url(https://images.unsplash.com/photo-1515387784663-e2e29a23f69e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80)`,
+    //   animation: `$myEffect 3s ease-in-out`,
+    //   backgroundRepeat: "no-repeat",
+    //   backgroundPosition: "center",
+    //   backgroundSize: "cover",
+    // },
+    // "& div:nth-of-type(2)": {
+    //   background:
+    //     "url(https://images.unsplash.com/photo-1528460033278-a6ba57020470?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80)",
+    //   transform: "translateX(100%)",
+    //   // backgroundColor: "orange",
+    //   backgroundRepeat: "no-repeat",
+    //   backgroundPosition: "center",
+    //   backgroundSize: "cover",
+    //   animation: `$myEffect2 3s ease-in-out`,
+    // },
   },
   container: {
-    color: "white",
+    color: (isDarkTheme) => (isDarkTheme ? "#fcfcfc" : "#111211"),
     transform: "translateY(10rem)",
     margin: "0 auto ",
     animation: `$myEffect3  3s  ease-in-out`,
@@ -88,10 +90,12 @@ const styles = (theme) => ({
   },
   title: {
     fontSize: "3.5rem",
-    color: "#4FC3F7",
+    color: (isDarkTheme) => (isDarkTheme ? "#4FC3F7" : "#01579B"),
     letterSpacing: "0.2rem",
     animation: "$headingEffect 1s",
     opacity: 1,
+    textShadow: (isDarkTheme) =>
+      isDarkTheme ? "none" : `0 0 18px rgba(0, 0, 0, 0.3)`,
   },
   description: {
     // backgroundColor: "red",
@@ -106,7 +110,7 @@ const styles = (theme) => ({
     },
   },
   divider: {
-    backgroundColor: "white",
+    backgroundColor: (isDarkTheme) => (isDarkTheme ? "#fcfcfc" : "#111211"),
   },
   details: {
     marginTop: "3rem",
@@ -131,7 +135,10 @@ const styles = (theme) => ({
       "&>div:nth-of-type(1)": {
         // backgroundColor: "red",
         minWidth: "9rem",
-        color: "#4FC3F7",
+        textShadow: (isDarkTheme) =>
+          isDarkTheme ? "none" : `0 0 18px rgba(0, 0, 0, 0.25)`,
+
+        color: (isDarkTheme) => (isDarkTheme ? "#4FC3F7" : "#01579B"),
         fontSize: "1.1rem",
         fontWeight: "600",
         textTransform: "uppercase",
@@ -160,20 +167,20 @@ const styles = (theme) => ({
     },
     "&>div": {
       marginRight: "3rem",
-      backgroundColor: "white",
-      color: "black",
+      backgroundColor: (isDarkTheme) => (isDarkTheme ? "#E3F2FD" : "#1565C0"),
+      color: (isDarkTheme) => (isDarkTheme ? "#111211" : "#fcfcfc"),
       whiteSpace: "nowrap",
       borderRadius: "28px",
       padding: "5px 15px",
     },
   },
   icon: {
-    color: "white",
+    color: (isDarkTheme) => (isDarkTheme ? "#fcfcfc" : "#111211"),
     // backgroundColor: "#123ef5",
     padding: " 0 1em",
     transition: "all 0.3s ease-in",
     "&:hover": {
-      color: "#4FC3F7",
+      color: (isDarkTheme) => (isDarkTheme ? "#4FC3F7" : "#01579B"),
     },
   },
   images: {
@@ -187,6 +194,6 @@ const styles = (theme) => ({
       margin: "0 0 2rem 0",
     },
   },
-});
+}));
 
 export default styles;

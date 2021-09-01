@@ -1,13 +1,15 @@
 import React, { useRef } from "react";
-import { withStyles } from "@material-ui/core/styles";
 import useProgressState from "./hooks/useProgressState";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import useOnScreen from "./utils/useOnScreen";
 import styles from "./styles/SkillsStyles";
+import { useStore } from "./contexts/theme.context";
 
-const Skills = ({ classes }) => {
+const Skills = () => {
+  const { isDarkTheme } = useStore();
+  const classes = styles(isDarkTheme);
   const ref = useRef(0);
   const setAnimation = () => {
     setEightyTimer();
@@ -180,4 +182,4 @@ const Skills = ({ classes }) => {
   );
 };
 
-export default withStyles(styles)(Skills);
+export default Skills;

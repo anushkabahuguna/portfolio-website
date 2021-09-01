@@ -1,14 +1,15 @@
 import Page from "./Page";
+import { useStore } from "./contexts/theme.context";
 import "./App.css";
-import { ThemeProvider } from "./contexts/theme.context";
-import { initialState, reducer } from "./reducers/theme.reducer";
 
 function App() {
+  const { isDarkTheme } = useStore();
+  const style = {
+    backgroundColor: isDarkTheme ? "#0a192f" : "#E3F2FD",
+  };
   return (
-    <div className="App">
-      <ThemeProvider initialState={initialState} reducer={reducer}>
-        <Page />
-      </ThemeProvider>
+    <div className="App" style={style}>
+      <Page />
     </div>
   );
 }

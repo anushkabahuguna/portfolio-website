@@ -1,4 +1,6 @@
-const styles = (theme) => ({
+import { makeStyles } from "@material-ui/core/styles";
+
+const styles = makeStyles(() => ({
   root: {
     height: "100%",
     overflow: "hidden",
@@ -28,7 +30,7 @@ const styles = (theme) => ({
     fontSize: "1rem",
     letterSpacing: "0.1rem",
     fontWeight: "bold",
-    color: "#ccd6f6",
+    color: (isDarkTheme) => (isDarkTheme ? "#ccd6f6" : "#233554"),
     // backgroundColor: "red",
   },
   image: {
@@ -42,5 +44,5 @@ const styles = (theme) => ({
     height: "auto",
     objectFit: "cover",
   },
-});
+}));
 export default styles;

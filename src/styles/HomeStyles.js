@@ -1,4 +1,6 @@
-const styles = (theme) => ({
+import { makeStyles } from "@material-ui/core/styles";
+
+const styles = makeStyles((theme) => ({
   "@keyframes increaseWidth": {
     "0%": {
       opacity: 0,
@@ -32,8 +34,8 @@ const styles = (theme) => ({
     },
   },
   root: {
-    color: "#fcfcfc",
-    backgroundColor: "red",
+    color: (isDarkTheme) => (isDarkTheme ? "#fcfcfc" : "#111211"),
+    // backgroundColor: "red",
     fontFamily: "Poppins,sans-serif",
     // navbar has zindex of 1100
     zIndex: 1000,
@@ -70,7 +72,7 @@ const styles = (theme) => ({
       animation: "$increaseWidth 2s",
       width: `100%`,
       height: `3px`,
-      background: `#ccd6f6`,
+      backgroundColor: (isDarkTheme) => (isDarkTheme ? "#ccd6f6" : "#233554"),
       left: `0px`,
       top: `0%`,
       transform: "scaleX(1)",
@@ -106,7 +108,8 @@ const styles = (theme) => ({
       display: `block`,
       width: `100%`,
       height: `3px`,
-      background: `#ccd6f6`,
+      backgroundColor: (isDarkTheme) => (isDarkTheme ? "#ccd6f6" : "#233554"),
+
       left: `0px`,
       // change this bottm when marginTop changes of links
       bottom: `45%`,
@@ -137,18 +140,20 @@ const styles = (theme) => ({
     },
     "&>a": {
       textDecoration: "none",
-      border: "1px solid #81D4FA",
+      border: (isDarkTheme) =>
+        `1px solid ${isDarkTheme ? `#81D4FA` : `#01579B`}`,
       transition: "all 0.3s ease-out",
       animation: "$linkAnim 2s",
-      color: "#ccd6f6",
+      color: (isDarkTheme) => (isDarkTheme ? "#ccd6f6" : "#233554"),
       "&:hover,focus": {
-        boxShadow: `inset 13em 0 0 0 #81D4FA`,
+        boxShadow: (isDarkTheme) =>
+          `inset 13em 0 0 0 ${isDarkTheme ? `#81D4FA` : `#01579B`}`,
         cursor: "pointer",
-        color: "black",
+        color: (isDarkTheme) => (isDarkTheme ? "#111211" : "#fcfcfc"),
       },
 
       padding: "0.4rem 1.7rem",
     },
   },
-});
+}));
 export default styles;

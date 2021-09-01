@@ -1,4 +1,5 @@
-const styles = {
+import { makeStyles } from "@material-ui/core/styles";
+const styles = makeStyles(() => ({
   root: {
     // backgroundColor: "#fcfcfc",
     display: "flex",
@@ -16,12 +17,11 @@ const styles = {
     background: "none",
     height: "10px",
     borderRadius: "10px",
-    color: "white",
     margin: " auto 0",
 
     // bar color
     "&>div:first-child": {
-      backgroundColor: "#4FC3F7",
+      backgroundColor: (isDarkTheme) => (isDarkTheme ? "#4FC3F7" : "#01579B"),
       borderRadius: "10px",
     },
   },
@@ -33,10 +33,10 @@ const styles = {
   },
   txt: {
     // backgroundColor: "yellow",
-    color: "#ccd6f6",
+    color: (isDarkTheme) => (isDarkTheme ? "#ccd6f6" : "#233554"),
 
     textAlign: "right",
     fontWeight: "600",
   },
-};
+}));
 export default styles;

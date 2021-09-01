@@ -1,4 +1,6 @@
-const styles = (theme) => ({
+import { makeStyles } from "@material-ui/core/styles";
+
+const styles = makeStyles((theme) => ({
   "@global": {
     scrollBehavior: "smooth",
     "*::-webkit-scrollbar": {
@@ -10,7 +12,7 @@ const styles = (theme) => ({
       borderRadius: `100px`,
     },
     "*::-webkit-scrollbar-thumb": {
-      backgroundColor: "#ccd6f6",
+      backgroundColor: (isDarkTheme) => (isDarkTheme ? "#ccd6f6" : "#8892b0"),
       borderRadius: `100px`,
       backgroundClip: `content-box`,
     },
@@ -96,31 +98,22 @@ const styles = (theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    color: "white",
+    color: (isDarkTheme) => (isDarkTheme ? "#ccd6f6" : "#233554"),
   },
   title: {
     flexGrow: 1,
-    color: "white",
+    color: (isDarkTheme) => (isDarkTheme ? "#fcfcfc" : "#111211"),
     fontFamily: "Roboto,sans-serif",
     fontWeight: "100",
   },
-  paper: {
-    border: "2px solid #000",
-    boxShadow: theme.shadows[5],
-    backgroundColor: "rgba(255,255,255,0.9)",
-    padding: theme.spacing(2, 4, 3),
-    width: "40%",
-    margin: "auto auto",
-    height: "500px",
-    transform: "translateY(40%)",
-  },
+
   cOverlay: {
     position: "absolute",
     zIndex: "0",
     width: "100%",
 
     height: "100vh",
-    backgroundColor: "#ebeeff",
+    backgroundColor: (isDarkTheme) => (isDarkTheme ? "#ebeeff" : "#112240"),
     transition: "transform 1s ease-in-out",
     transform: ` rotate(24deg) skew(-15deg) translate(-170%,0px)`,
   },
@@ -147,7 +140,7 @@ const styles = (theme) => ({
     fontSize: "4rem",
     transform: "translateY(50%)",
     opacity: "0",
-    color: "black",
+    color: (isDarkTheme) => (isDarkTheme ? "#fcfcfc" : "#111211"),
   },
   links: {
     // backgroundColor: "blue",
@@ -198,9 +191,10 @@ const styles = (theme) => ({
       //   backgroundColor: "black",
       animation: `$myEffecteven 2s ease-in-out`,
       transform: "translateX(60%)",
-      color: "#1d1c1f",
+
       "&:hover": {
-        borderBottom: "2px solid #1d1c1f",
+        borderBottom: (isDarkTheme) =>
+          `2px solid ${isDarkTheme ? `#1d1c1f` : `#fcfcfc`}`,
       },
       [theme.breakpoints.down("xs")]: {
         transform: "translateX(0%)",
@@ -213,9 +207,10 @@ const styles = (theme) => ({
     "& a:nth-of-type(odd)": {
       transform: "translateX(-60%)",
       animation: `$myEffectodd 2s ease-in-out`,
-      color: "#1d1c1f",
+      color: (isDarkTheme) => (isDarkTheme ? "#1d1c1f" : "#fcfcfc"),
       "&:hover": {
-        borderBottom: "2px solid #1d1c1f",
+        borderBottom: (isDarkTheme) =>
+          `2px solid ${isDarkTheme ? `#1d1c1f` : `#fcfcfc`}`,
       },
       [theme.breakpoints.down("xs")]: {
         transform: "translateX(0%)",
@@ -241,10 +236,10 @@ const styles = (theme) => ({
     marginTop: "1rem",
     marginRight: "3rem",
     fontSize: "3rem",
-    color: "#1d1c1f",
+    color: (isDarkTheme) => (isDarkTheme ? "#1d1c1f" : "#fcfcfc"),
     cursor: "pointer",
     "&:hover": {
-      color: "#303F9F",
+      color: (isDarkTheme) => (isDarkTheme ? "#303F9F" : "#E3F2FD"),
     },
     [theme.breakpoints.down("xs")]: {
       transform: "translateX(0%)",
@@ -252,6 +247,15 @@ const styles = (theme) => ({
       marginTop: "3rem",
     },
   },
-});
+  theme: {
+    marginLeft: "auto",
+    "& span": {
+      fontSize: "1.1rem",
+      letterSpacing: "0.03rem",
+      fontWeight: "bold",
+      textTransform: "uppercase",
+    },
+  },
+}));
 
 export default styles;

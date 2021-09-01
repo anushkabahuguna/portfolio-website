@@ -1,15 +1,15 @@
-import React, { createContext, useContext, useReducer } from "react";
+import React, { useContext, createContext } from "react";
+import useToggleState from "../hooks/useToggleState";
+const Store = createContext();
+Store.displayName = "Store";
 
-const ThemeContext = createContext();
-// ThemeContext.displayName = 'ThemeContext';
+export const useStore = () => useContext(Store);
 
-export const useThemeContext = () => useContext(ThemeContext);
-
-export const ThemeProvider = ({ children, initialState, reducer }) => {
-  const [globalState, dispatch] = useReducer(reducer, initialState);
+export const StoreProvider = ({ children }) => {
+  const [isDarkTheme, changeTheme] = useToggleState(true);
   return (
-    <ThemeContext.Provider value={{ globalState, dispatch }}>
+    <Store.Provider value={{ isDarkTheme, changeTheme }}>
       {children}
-    </ThemeContext.Provider>
+    </Store.Provider>
   );
 };

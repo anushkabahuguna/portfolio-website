@@ -1,4 +1,5 @@
-const styles = (theme) => ({
+import { makeStyles } from "@material-ui/core/styles";
+const styles = makeStyles((theme) => ({
   "@keyframes left-anim ": {
     " 0%": {
       opacity: 0,
@@ -11,9 +12,9 @@ const styles = (theme) => ({
   },
   root: {
     fontFamily: "Roboto ,sans-serif",
-    // backgroundColor: "red",
+    // backgroundColor: "none",
     margin: "6rem auto",
-    color: "#ccd6f6",
+    color: (isDarkTheme) => (isDarkTheme ? "#ccd6f6" : "#233554"),
     height: "85%",
     overflowX: "hidden",
     overflowY: "auto",
@@ -46,12 +47,13 @@ const styles = (theme) => ({
     fontSize: "5rem",
     alignSelf: "flex-start",
     marginLeft: "5rem",
-    color: "#81D4FA",
+    color: (isDarkTheme) => (isDarkTheme ? "#81D4FA" : "#01579B"),
     fontFamily: "Work Sans, sans-serif",
     "&>div": {
       // textDecoration: "underline",
       paddingBottom: "1.2rem",
-      borderBottom: "10px solid #81D4FA",
+      borderBottom: (isDarkTheme) =>
+        `10px solid ${isDarkTheme ? `#81D4FA` : "#01579B"}`,
       // backgroundColor: "black",
       // textUnderlineOffset: "3px",
       margin: "4rem 0",
@@ -74,13 +76,14 @@ const styles = (theme) => ({
     marginLeft: "5rem",
 
     "& a": {
-      color: "#ccd6f6",
+      color: (isDarkTheme) => (isDarkTheme ? "#ccd6f6" : "#233554"),
 
       padding: " 0.4rem 1rem",
       transition: "all 0.2s ease-in",
       border: "2px dashed transparent",
       "&:focus": {
-        border: "2px dashed #29B6F6",
+        border: (isDarkTheme) =>
+          `2px dashed ${isDarkTheme ? `#29B6F6` : `#0288D1`}`,
       },
     },
     "&>div": {
@@ -101,7 +104,7 @@ const styles = (theme) => ({
       width: "1.3rem",
       transition: "all 0.3s ease-in",
       "&:hover": {
-        color: "#4FC3F7",
+        color: (isDarkTheme) => (isDarkTheme ? "#4FC3F7" : "#0288D1"),
       },
     },
   },
@@ -111,7 +114,7 @@ const styles = (theme) => ({
     "& >*": {
       margin: "2rem 0",
       padding: "0.5rem 0.5rem",
-      backgroundColor: "#fcfcfc",
+      backgroundColor: (isDarkTheme) => (isDarkTheme ? "#fcfcfc" : "#F5F5F5"),
     },
     "& >div:nth-of-type(2)": {
       marginTop: "1rem",
@@ -142,11 +145,12 @@ const styles = (theme) => ({
     outline: "none",
     backgroundColor: "#81D4FA",
     fontWeight: "700",
-    letterSpacing: "0.04rem",
+    letterSpacing: "0.1rem",
     transition: "all 0.2s ease-in",
     fontSize: "0.75rem",
     "&:hover": {
-      backgroundColor: "#29B6F6",
+      color: (isDarkTheme) => (isDarkTheme ? "black" : "#E1F5FE"),
+      backgroundColor: (isDarkTheme) => (isDarkTheme ? "#29B6F6" : "#0288D1"),
     },
   },
   iconLabel: {
@@ -158,6 +162,6 @@ const styles = (theme) => ({
   snackbar: {
     background: "none",
   },
-});
+}));
 
 export default styles;

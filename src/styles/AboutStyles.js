@@ -1,6 +1,7 @@
-const styles = (theme) => ({
+import { makeStyles } from "@material-ui/core/styles";
+const styles = makeStyles((theme) => ({
   root: {
-    color: "white",
+    color: (isDarkTheme) => (isDarkTheme ? "#fcfcfc" : "#111211"),
     // backgroundColor: "red",
     margin: "4rem 0",
     height: "90%",
@@ -13,7 +14,6 @@ const styles = (theme) => ({
   },
   container: {
     // backgroundColor: "grey",
-
     marginTop: "5rem",
   },
   topContent: {
@@ -58,11 +58,15 @@ const styles = (theme) => ({
       width: "260px",
       height: "auto",
       padding: "0.3rem",
-      filter: `sepia(69%) saturate(200%) hue-rotate(170deg) brightness(101%) contrast(96%)`,
-      border: "2px solid #ba86ba",
+      filter: `sepia(69%) saturate(50%) hue-rotate(170deg) brightness(101%) contrast(96%)`,
+      border: (isDarkTheme) =>
+        `2px solid ${isDarkTheme ? `#ba86ba` : "transparent"}`,
       transition: "all 0.3s ease-in",
       borderRadius: "50%",
-      boxShadow: "4px 7px 5px 0px rgba(0,0,0,1)",
+      boxShadow: (isDarkTheme) =>
+        isDarkTheme
+          ? "4px 5px 8px 0px rgba(0,0,0,1)"
+          : "4px 5px 8px 0px rgba(0,0,0,0.4)",
       [theme.breakpoints.down("md")]: {
         width: "200px",
         // backgroundColor: "blue",
@@ -96,29 +100,13 @@ const styles = (theme) => ({
     letterSpacing: ".1rem",
     fontFamily: "Raleway,sans-serif",
     fontWeight: "600",
+    textShadow: (isDarkTheme) =>
+      isDarkTheme ? "none" : `0 0 18px rgba(0, 0, 0, 0.35)`,
+
     [theme.breakpoints.down("md")]: {
       // backgroundColor: "pink",
       fontSize: "2rem",
     },
-    // "&:after": {
-    //   content: '""',
-    //   display: "block",
-    //   position: "relative",
-    //   top: "-26px",
-    //   left: "10rem",
-
-    //   width: "200px",
-    //   height: "1px",
-    //   marginLeft: "100px",
-    //   backgroundColor: "#ccd6f6",
-    //   boxSizing: "inherit",
-    //   [theme.breakpoints.down("md")]: {
-    //     // backgroundColor: "pink",
-    //     left: "6rem",
-    //     top: "-21px",
-    //     width: "150px",
-    //   },
-    // },
   },
   summaryContent: {
     // backgroundColor: "hotpink",
@@ -126,7 +114,7 @@ const styles = (theme) => ({
     fontSize: "1rem",
     letterSpacing: ".06rem",
     wordSpacing: "0.2rem",
-    color: "#ccd6f6",
+    color: (isDarkTheme) => (isDarkTheme ? "#ccd6f6" : "#233554"),
     lineHeight: "1.8rem",
     fontWeight: "400",
     "&>div:first-child": {
@@ -137,7 +125,7 @@ const styles = (theme) => ({
     },
   },
   download: {
-    color: "#0a192f",
+    color: (isDarkTheme) => (isDarkTheme ? "#0a192f" : "#E1F5FE"),
     fontSize: "11px",
     textTransform: "uppercase",
     fontWeight: "800",
@@ -149,16 +137,19 @@ const styles = (theme) => ({
     cursor: "pointer",
     display: "inline-block",
     textAlign: "center",
+    boxShadow: (isDarkTheme) =>
+      isDarkTheme
+        ? `0 0 20px 0px rgba(0, 0, 0, 0)`
+        : `0 0 20px 0px rgba(0, 0, 0, 0.35)`,
 
-    backgroundColor: "#4FC3F7",
-    border: "1px solid #4FC3F7",
+    backgroundColor: (isDarkTheme) => (isDarkTheme ? "#4FC3F7" : "#01579B"),
+    border: (isDarkTheme) => `1px solid ${isDarkTheme ? `#4FC3F7` : `#01579B`}`,
     textDecoration: "none",
 
     transition: "all 0.3s",
     "&:hover": {
-      color: " #4FC3F7",
-      border: "1px solid #4FC3F7",
-      transition: " all 0.3s",
+      color: (isDarkTheme) => (isDarkTheme ? "#4FC3F7" : "#01579B"),
+      transition: "all 0.3s",
       background: "none",
     },
   },
@@ -171,7 +162,7 @@ const styles = (theme) => ({
   },
   eduHeading: {
     // backgroundColor: "teal",
-    color: "#E1F5FE",
+    color: (isDarkTheme) => (isDarkTheme ? "#E1F5FE" : "#11284f"),
     textTransform: "uppercase",
     whiteSpace: "nowrap",
     fontSize: "1.5rem",
@@ -179,6 +170,8 @@ const styles = (theme) => ({
     textAlign: "center",
     fontFamily: "Raleway,sans-serif",
     fontWeight: "700",
+    textShadow: (isDarkTheme) =>
+      isDarkTheme ? "none" : `0 0 18px rgba(0, 0, 0, 0.35)`,
   },
   eduTimeline: {
     // backgroundColor: "seagreen",
@@ -238,17 +231,18 @@ const styles = (theme) => ({
     letterSpacing: "0.08rem",
     fontSize: "0.7rem",
     "&>a": {
-      color: "#E1F5FE",
+      color: (isDarkTheme) => (isDarkTheme ? "#E1F5FE" : "#11284f"),
       textDecoration: "none",
       paddingBottom: "0.3rem",
       transition: "all 0.2s ease-in",
       borderBottom: "1px solid transparent",
       "&:hover": {
-        borderBottom: "1px solid #4FC3F7",
-        color: "#4FC3F7",
+        borderBottom: (isDarkTheme) =>
+          `1px solid ${isDarkTheme ? `#4FC3F7` : `#01579B`}`,
+        color: (isDarkTheme) => (isDarkTheme ? "#4FC3F7" : "#01579B"),
       },
     },
   },
-});
+}));
 
 export default styles;

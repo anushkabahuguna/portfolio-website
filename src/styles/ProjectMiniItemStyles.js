@@ -1,5 +1,10 @@
 const styles = (theme) => ({
   root: {
+    // boxShadow: (isDarkTheme) =>
+    // isDarkTheme
+    //   ? "4px 7px 5px 0px rgba(0,0,0,1)"
+    //   : "4px 5px 5px 0px rgba(0,0,0,0.3)",
+    boxShadow: "4px 4px 12px 0px rgba(0,0,0,0.5)",
     backgroundColor: "#111",
     display: "flex",
     height: "343px",
