@@ -82,7 +82,12 @@ function About({ services }) {
                   In my spare time, I enjoy doing photography and reading
                   novels.
                 </div>
-                <a href={resume} className={classes.download} download>
+                <a
+                  href={resume}
+                  className={classes.download}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
                   Download Resume
                 </a>
               </animated.div>
