@@ -160,7 +160,8 @@ const styles = makeStyles((theme) => ({
     letterSpacing: "0.09rem",
   },
   snackbar: {
-    background: "none",
+    background: "transparent",
+    padding: 0,
   },
 }));
 

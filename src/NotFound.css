@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&display=swap');
+
+@keyframes loading-anim {
+    0% {
+
+        transform: translateY(0);
+    }
+
+    100% {
+
+        transform: translateY(-130%);
+    }
+}
+
+@keyframes loading-anim-opac {
+    0% {
+
+        opacity: 1;
+    }
+
+    100% {
+
+        opacity: 0;
+    }
+}
+
+.Not-Found {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ccd6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: loading-anim 3s 3s;
+}
+
+.loading-title {
+    /* background-color: rgb(151, 96, 96); */
+    /* flex-basis: 80%; */
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    margin: 1rem 2rem;
+    font-weight: 100;
+    /* letter-spacing: 0.1rem; */
+    /* font-style: italic; */
+
+}
+
+.loading-title::first-letter {
+    font-size: 8rem;
+}
+
+.loading-div {
+
+    display: flex;
+    /* background-color: aqua; */
+    /* flex-basis: 20%; */
+    align-self: flex-end;
+    margin-right: 3rem;
+    font-size: 4rem;
+    font-family: Roboto, sans-serif;
+    margin-bottom: 2rem;
+
+}
+
+.percent {
+
+    align-self: flex-end;
+}
+
+@media only screen and (max-width: 360px) {
+    .loading-title::first-letter {
+        font-size: 6rem;
+    }
+
+    .loading-title {
+        font-size: 3rem;
+    }
+
+    .loading-div {
+        font-size: 2rem;
+    }
+}

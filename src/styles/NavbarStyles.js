@@ -250,8 +250,8 @@ const styles = makeStyles((theme) => ({
   theme: {
     marginLeft: "auto",
     "& span": {
-      fontSize: "1.1rem",
-      letterSpacing: "0.03rem",
+      fontSize: "1rem",
+      letterSpacing: "0.1rem",
       fontWeight: "bold",
       textTransform: "uppercase",
     },

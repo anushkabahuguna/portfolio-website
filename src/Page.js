@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./Navbar";
 import ProjectList from "./ProjectList";
 import ProjectItem from "./ProjectItem";
@@ -8,32 +8,14 @@ import { projects, services } from "./data/info";
 import { Switch, Route as ProjectRoute } from "react-router-dom";
 import { Navigation, Route, glide, fade, scale } from "react-tiger-transition";
 import "react-tiger-transition/styles/main.min.css";
-
+import NotFound from "./NotFound";
 import About from "./About";
 import Home from "./Home";
+import useToggleState from "./hooks/useToggleState";
 const style = {
   height: "100%",
   width: "100%",
 };
-glide({
-  name: "glide-f",
-  direction: "left",
-  enter: {
-    duration: 600,
-    easing: "ease",
-    opacity: 0.3,
-    zIndex: 1,
-    delay: 0,
-    scale: 0.6,
-  },
-  exit: {
-    duration: 600,
-    easing: "ease",
-    opacity: 1,
-    zIndex: 2,
-    delay: 0,
-  },
-});
 fade({
   name: "default-fade",
 });
@@ -60,37 +42,50 @@ scale(
     },
   }
 );
-function findProject(id) {
-  return projects.find((project) => project.id === id);
+
+function checkId(id) {
+  var project = projects.find((project) => project.id === id);
+  if (project) return <ProjectItem {...project} />;
+  else return <Home />;
 }
 function Page() {
+  const [loading, setLoading] = useToggleState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading();
+    }, 4500);
+  }, []);
   return (
-    <div style={style}>
-      <Switch>
-        <Navigation>
-          <Navbar />
-          <Route exact path="/projects">
-            <ProjectList projects={projects} />
-          </Route>
-          <Route exact path="/about">
-            <About services={services} />
-          </Route>
-          <ProjectRoute
-            exact
-            path="/projects/:id"
-            render={(routeProps) => (
-              <ProjectItem {...findProject(routeProps.match.params.id)} />
-            )}
-          ></ProjectRoute>
-          <Route exact path="/contact">
-            <Contact />
-          </Route>
-          <Route exact path="/">
-            <Home />
-          </Route>
-        </Navigation>
-      </Switch>
-    </div>
+    <>
+      {!loading ? (
+        <div style={style}>
+          <Switch>
+            <Navigation>
+              <Navbar />
+              <Route exact path="/projects">
+                <ProjectList projects={projects} />
+              </Route>
+              <Route exact path="/about" key="/about">
+                <About services={services} />
+              </Route>
+              <ProjectRoute
+                exact
+                path="/projects/:id"
+                render={(routeProps) => checkId(routeProps.match.params.id)}
+              ></ProjectRoute>
+              <Route exact path="/contact">
+                <Contact />
+              </Route>
+              <Route exact path="/">
+                <Home />
+              </Route>
+            </Navigation>
+          </Switch>
+        </div>
+      ) : (
+        <NotFound />
+      )}
+    </>
   );
 }
 
