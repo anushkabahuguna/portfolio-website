@@ -201,7 +201,7 @@ const styles = makeStyles((theme) => ({
 
         animation: `$myEffecteven-s 2s ease-in-out`,
 
-        fontSize: "3rem",
+        fontSize: "2rem",
       },
     },
     "& a:nth-of-type(odd)": {
@@ -214,7 +214,7 @@ const styles = makeStyles((theme) => ({
       },
       [theme.breakpoints.down("xs")]: {
         transform: "translateX(0%)",
-        fontSize: "3rem",
+        fontSize: "2rem",
         animation: `$myEffectodd-s 2s ease-in-out`,
       },
     },
@@ -254,6 +254,9 @@ const styles = makeStyles((theme) => ({
       letterSpacing: "0.1rem",
       fontWeight: "bold",
       textTransform: "uppercase",
+      [theme.breakpoints.down("xs")]: {
+        fontSize: "0.7rem",
+      },
     },
   },
 }));

@@ -89,77 +89,79 @@ function Contact() {
           <div ref={formRef} className="Contact">
             <div className={classes.content}>
               {onFormScreen ? (
-                <ValidatorForm
-                  ref={inputEl}
-                  onSubmit={handleSubmit}
-                  className={classes.form}
-                >
-                  {setAnimation()}
-                  <Select
-                    labelId="choice-label"
-                    id="choice-label"
-                    value={workType}
-                    onChange={setWorkType}
-                    disableUnderline={true}
-                    name="work-type"
-                    className={classes.select}
+                <div>
+                  <ValidatorForm
+                    ref={inputEl}
+                    onSubmit={handleSubmit}
+                    className={classes.form}
                   >
-                    <MenuItem value={"Web Development"}>
-                      Web Development
-                    </MenuItem>
-                    <MenuItem value={"Graphic Designing"}>
-                      Graphic Designing
-                    </MenuItem>
-                  </Select>
-                  <div>
-                    <TextValidator
-                      fullWidth
-                      id="name-input"
-                      onChange={setName}
-                      name="name"
-                      value={name}
-                      label="Full Name"
-                      validators={["required"]}
-                      errorMessages={["This field is required"]}
-                    />
-                  </div>
-                  <div>
-                    <TextValidator
-                      fullWidth
-                      id="email-input"
-                      onChange={setEmail}
-                      name="email"
-                      label="Email"
-                      value={email}
-                      validators={["required", "isEmail"]}
-                      errorMessages={[
-                        "This field is required",
-                        "Email is not valid",
-                      ]}
-                    />
-                  </div>
-                  <div>
-                    <TextValidator
-                      fullWidth
-                      id="message-input"
-                      onChange={setMessage}
-                      name="message"
-                      multiline={true}
-                      rows={5}
-                      label="Message"
-                      value={message}
-                      validators={["required", "maxStringLength:700"]}
-                      errorMessages={[
-                        "This field is required",
-                        "Reached max limit",
-                      ]}
-                    />
-                  </div>
+                    {setAnimation()}
+                    <Select
+                      labelId="choice-label"
+                      id="choice-label"
+                      value={workType}
+                      onChange={setWorkType}
+                      disableUnderline={true}
+                      name="work-type"
+                      className={classes.select}
+                    >
+                      <MenuItem value={"Web Development"}>
+                        Web Development
+                      </MenuItem>
+                      <MenuItem value={"Graphic Designing"}>
+                        Graphic Designing
+                      </MenuItem>
+                    </Select>
+                    <div>
+                      <TextValidator
+                        fullWidth
+                        id="name-input"
+                        onChange={setName}
+                        name="name"
+                        value={name}
+                        label="Full Name"
+                        validators={["required"]}
+                        errorMessages={["This field is required"]}
+                      />
+                    </div>
+                    <div>
+                      <TextValidator
+                        fullWidth
+                        id="email-input"
+                        onChange={setEmail}
+                        name="email"
+                        label="Email"
+                        value={email}
+                        validators={["required", "isEmail"]}
+                        errorMessages={[
+                          "This field is required",
+                          "Email is not valid",
+                        ]}
+                      />
+                    </div>
+                    <div>
+                      <TextValidator
+                        fullWidth
+                        id="message-input"
+                        onChange={setMessage}
+                        name="message"
+                        multiline={true}
+                        rows={5}
+                        label="Message"
+                        value={message}
+                        validators={["required", "maxStringLength:700"]}
+                        errorMessages={[
+                          "This field is required",
+                          "Reached max limit",
+                        ]}
+                      />
+                    </div>
 
-                  {/* sendgrid API for mails */}
-                  <button type="submit" className={classes.submit}>
-                    Submit
-                  </button>
+                    {/* sendgrid API for mails */}
+                    <button type="submit" className={classes.submit}>
+                      Submit
+                    </button>
+                  </ValidatorForm>
                   <Snackbar
                     className={classes.snackbar}
                     autoHideDuration={3000}
@@ -168,19 +170,17 @@ function Contact() {
                     onClose={toggleIsSubmitted}
                     message="Submitted!"
                   />
-                </ValidatorForm>
+                </div>
               ) : (
                 <ValidatorForm
-                  ref={inputEl}
-                  onSubmit={handleSubmit}
                   className={classes.form}
                   style={{ opacity: 0 }}
+                  onSubmit={() => {}}
                 >
                   <Select
                     labelId="choice-label"
                     id="choice-label"
                     value={workType}
-                    onChange={setWorkType}
                     disableUnderline={true}
                     name="work-type"
                     className={classes.select}
@@ -196,7 +196,6 @@ function Contact() {
                     <TextValidator
                       fullWidth
                       id="name-input"
-                      onChange={setName}
                       name="name"
                       value={name}
                       label="Full Name"
@@ -208,7 +207,6 @@ function Contact() {
                     <TextValidator
                       fullWidth
                       id="email-input"
-                      onChange={setEmail}
                       name="email"
                       label="Email"
                       value={email}
@@ -223,7 +221,6 @@ function Contact() {
                     <TextValidator
                       fullWidth
                       id="message-input"
-                      onChange={setMessage}
                       name="message"
                       multiline={true}
                       rows={5}
@@ -237,18 +234,9 @@ function Contact() {
                     />
                   </div>
 
-                  {/* sendgrid API for mails */}
                   <button type="submit" className={classes.submit}>
                     Submit
                   </button>
-                  <Snackbar
-                    className={classes.snackbar}
-                    autoHideDuration={3000}
-                    anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-                    open={isSubmitted}
-                    onClose={toggleIsSubmitted}
-                    message="Submitted!"
-                  />
                 </ValidatorForm>
               )}
             </div>

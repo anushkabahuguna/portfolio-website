@@ -30,6 +30,9 @@ const styles = makeStyles((theme) => ({
         marginBottom: "1rem",
         marginLeft: 0,
       },
+      [theme.breakpoints.down("xs")]: {
+        fontSize: "1.8rem",
+      },
     },
   },
   eduContent: {
@@ -54,6 +57,9 @@ const styles = makeStyles((theme) => ({
 
       fontSize: "1rem",
       color: (isDarkTheme) => (isDarkTheme ? "#fcfcfc" : "#111211"),
+      [theme.breakpoints.down("xs")]: {
+        fontSize: "0.85rem",
+      },
     },
     //content
     "&>div:nth-of-type(2)": {
@@ -61,6 +67,9 @@ const styles = makeStyles((theme) => ({
 
       margin: "0.7rem 0",
       fontSize: "0.7rem",
+      [theme.breakpoints.down("xs")]: {
+        fontSize: "0.6rem",
+      },
       "&>div:first-child": {
         marginBottom: "0.2rem",
       },

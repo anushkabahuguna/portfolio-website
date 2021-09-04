@@ -58,7 +58,7 @@ const styles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       width: "80%",
     },
-    "@media only screen and (max-width: 360px)": {
+    "@media only screen and (max-width: 414px)": {
       top: "25%",
     },
   },
@@ -89,10 +89,14 @@ const styles = makeStyles((theme) => ({
     letterSpacing: "0.3rem",
     textTransform: `uppercase`,
     animation: "$changeOpacity 3s",
-    whiteSpace: "no-wrap",
     "@media only screen and (max-width: 455px)": {
       marginBottom: "2rem",
       marginTop: "1.7rem",
+    },
+    "@media only screen and (max-width:337px)": {
+      fontSize: "1rem",
+      marginTop: "0rem",
+      marginBottom: "2.3rem",
     },
   },
   des: {
@@ -102,6 +106,9 @@ const styles = makeStyles((theme) => ({
     animation: "$changeOpacity 3s",
     [theme.breakpoints.down("xs")]: {
       fontSize: "0.8rem",
+    },
+    "@media only screen and (max-width:337px)": {
+      fontSize: "0.6rem",
     },
     "&::after": {
       content: "''",
@@ -138,6 +145,10 @@ const styles = makeStyles((theme) => ({
       alignItems: "center",
       gap: "2rem",
     },
+    "@media only screen and (max-width:337px)": {
+      marginTop: "3.9rem",
+      gap: "1rem",
+    },
     "&>a": {
       textDecoration: "none",
       border: (isDarkTheme) =>
@@ -153,6 +164,10 @@ const styles = makeStyles((theme) => ({
       },
 
       padding: "0.4rem 1.7rem",
+      [theme.breakpoints.down("xs")]: {
+        fontSize: "0.5rem",
+        padding: "0.4rem 1.3rem",
+      },
     },
   },
 }));

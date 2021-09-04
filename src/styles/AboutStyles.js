@@ -75,6 +75,15 @@ const styles = makeStyles((theme) => ({
         // backgroundColor: "coral",
         margin: 0,
       },
+      "@media only screen and (max-width: 768px)": {
+        width: "230px",
+      },
+      "@media only screen and (max-width: 487px)": {
+        width: "200px",
+      },
+      "@media only screen and (max-width: 300px)": {
+        width: "180px",
+      },
     },
   },
   summaryBox: {
@@ -107,6 +116,9 @@ const styles = makeStyles((theme) => ({
       // backgroundColor: "pink",
       fontSize: "2rem",
     },
+    "@media only screen and (max-width: 280px)": {
+      fontSize: "1.9rem",
+    },
   },
   summaryContent: {
     // backgroundColor: "hotpink",
@@ -122,6 +134,9 @@ const styles = makeStyles((theme) => ({
     },
     "&>div": {
       marginBottom: "2rem",
+    },
+    "@media only screen and (max-width: 380px)": {
+      fontSize: "0.8rem",
     },
   },
   download: {
@@ -149,8 +164,16 @@ const styles = makeStyles((theme) => ({
     transition: "all 0.3s",
     "&:hover": {
       color: (isDarkTheme) => (isDarkTheme ? "#4FC3F7" : "#01579B"),
-      transition: "all 0.3s",
+
       background: "none",
+    },
+    "@media only screen and (max-width: 414px)": {
+      fontSize: "9px",
+      padding: "4px 11px",
+    },
+    "@media only screen and (max-width: 320px)": {
+      fontSize: "9px",
+      padding: "4px 11px",
     },
   },
   eduContainer: {
@@ -172,6 +195,11 @@ const styles = makeStyles((theme) => ({
     fontWeight: "700",
     textShadow: (isDarkTheme) =>
       isDarkTheme ? "none" : `0 0 18px rgba(0, 0, 0, 0.35)`,
+    "@media only screen and (max-width: 414px)": {
+      "@media only screen and (max-width:414px)": {
+        fontSize: "1.3rem",
+      },
+    },
   },
   eduTimeline: {
     // backgroundColor: "seagreen",
@@ -180,6 +208,9 @@ const styles = makeStyles((theme) => ({
     margin: "1rem auto",
     [theme.breakpoints.down("md")]: {
       width: "90%",
+    },
+    "@media only screen and (max-width:300px)": {
+      width: "100%",
     },
   },
 
@@ -199,6 +230,7 @@ const styles = makeStyles((theme) => ({
   skillsContainer: {
     // backgroundColor: "orange",
     //heading
+
     "&>div:first-child": {
       // backgroundColor: "red",
       margin: "0 auto",
@@ -230,6 +262,10 @@ const styles = makeStyles((theme) => ({
 
     letterSpacing: "0.08rem",
     fontSize: "0.7rem",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "0.6rem",
+      letterSpacing: "0.1rem",
+    },
     "&>a": {
       color: (isDarkTheme) => (isDarkTheme ? "#E1F5FE" : "#11284f"),
       textDecoration: "none",

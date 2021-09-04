@@ -66,6 +66,10 @@ const styles = makeStyles((theme) => ({
       margin: "0 auto",
       fontSize: "5rem",
     },
+    [theme.breakpoints.down("xs")]: {
+      margin: "0 auto",
+      fontSize: "3rem",
+    },
   },
   content: {
     // backgroundColor: "pink",
@@ -90,6 +94,12 @@ const styles = makeStyles((theme) => ({
       display: "flex",
       gap: "2rem",
       marginBottom: "1rem",
+      [theme.breakpoints.down("xs")]: {
+        gap: "1rem",
+      },
+      "@media only screen and (max-width: 280px)": {
+        gap: "0rem",
+      },
     },
 
     [theme.breakpoints.down("md")]: {
@@ -105,6 +115,9 @@ const styles = makeStyles((theme) => ({
       transition: "all 0.3s ease-in",
       "&:hover": {
         color: (isDarkTheme) => (isDarkTheme ? "#4FC3F7" : "#0288D1"),
+      },
+      [theme.breakpoints.down("xs")]: {
+        width: "1.1rem",
       },
     },
   },
@@ -152,16 +165,29 @@ const styles = makeStyles((theme) => ({
       color: (isDarkTheme) => (isDarkTheme ? "black" : "#E1F5FE"),
       backgroundColor: (isDarkTheme) => (isDarkTheme ? "#29B6F6" : "#0288D1"),
     },
+    [theme.breakpoints.down("xs")]: {
+      padding: "0.8rem 1rem",
+    },
   },
   iconLabel: {
     // backgroundColor: "red",
     margin: "auto 0",
     fontSize: "0.8rem",
     letterSpacing: "0.09rem",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "0.7rem",
+    },
+    "@media only screen and (max-width: 280px)": {
+      fontSize: "0.6rem",
+    },
   },
   snackbar: {
-    background: "transparent",
     padding: 0,
+    "&>div:nth-child(1)": {
+      // borderRadius: 0,
+      // backgroundColor,
+      // backgroundColor: "transparent",
+    },
   },
 }));
 

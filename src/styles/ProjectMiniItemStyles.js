@@ -1,9 +1,5 @@
-const styles = (theme) => ({
+const styles = () => ({
   root: {
-    // boxShadow: (isDarkTheme) =>
-    // isDarkTheme
-    //   ? "4px 7px 5px 0px rgba(0,0,0,1)"
-    //   : "4px 5px 5px 0px rgba(0,0,0,0.3)",
     boxShadow: "4px 4px 12px 0px rgba(0,0,0,0.5)",
     backgroundColor: "#111",
     display: "flex",
@@ -16,10 +12,29 @@ const styles = (theme) => ({
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     overflow: "hidden",
+    transition: "all 0.3s ease",
     "&:hover >div:first-child ": {
       height: "100%",
       transform: "translateY(0%)",
       backdropFilter: "blur(4px)",
+    },
+    "@media only screen and (max-width: 1651px)": {
+      height: "300px",
+    },
+    "@media only screen and (max-width: 953px)": {
+      height: "380px",
+    },
+    "@media only screen and (max-width: 605px)": {
+      height: "260px",
+    },
+    "@media only screen and (max-width: 480px)": {
+      height: "230px",
+    },
+    "@media only screen and (max-width: 406px)": {
+      height: "190px",
+    },
+    "@media only screen and (max-width: 320px)": {
+      height: "150px",
     },
   },
 
@@ -31,6 +46,7 @@ const styles = (theme) => ({
     transition: "transform .3s ease",
     height: "100%",
     transform: "translateY(110%)",
+
     display: "flex",
     textAlign: "center",
     flexDirection: "column",
@@ -42,6 +58,21 @@ const styles = (theme) => ({
       textTransform: "uppercase",
       letterSpacing: "0.1rem",
       fontSize: "1.5rem",
+      "@media only screen and (max-width: 1334px)": {
+        fontSize: "1.2rem",
+      },
+      "@media only screen and (max-width: 887px)": {
+        fontSize: "1.6rem",
+      },
+      "@media only screen and (max-width: 605px)": {
+        fontSize: "1.3rem",
+      },
+      "@media only screen and (max-width: 360px)": {
+        fontSize: "1.2rem",
+      },
+      "@media only screen and (max-width: 320px)": {
+        fontSize: "1rem",
+      },
     },
     // summary
     "&>div:nth-child(1)>div": {
@@ -50,6 +81,18 @@ const styles = (theme) => ({
       fontSize: "0.95rem",
       letterSpacing: "0.03rem",
       fontStyle: "italic",
+      "@media only screen and (max-width: 414px)": {
+        fontSize: "0.85rem",
+      },
+      "@media only screen and (max-width: 375px)": {
+        fontSize: "0.7rem",
+      },
+      "@media only screen and (max-width: 360px)": {
+        fontSize: "0.6rem",
+      },
+      "@media only screen and (max-width: 280px)": {
+        fontSize: "0.5rem",
+      },
     },
   },
   btn: {
@@ -57,7 +100,22 @@ const styles = (theme) => ({
     border: "2px solid rgba(255,255,255,1)",
     fontSize: "0.8rem",
     letterSpacing: "0.1rem",
-
+    "@media only screen and (max-width: 1024px)": {
+      fontSize: "0.7rem",
+    },
+    "@media only screen and (max-width: 414px)": {
+      fontSize: "0.5rem",
+    },
+    "@media only screen and (max-width: 375px)": {
+      marginTop: "0.8rem",
+    },
+    "@media only screen and (max-width: 360px)": {
+      fontSize: "0.6rem",
+      marginTop: "1rem",
+    },
+    "@media only screen and (max-width: 320px)": {
+      fontSize: "0.4rem",
+    },
     fontWeight: "700",
     boxShadow: `8px 8px 0px -1px rgba(255,255,255,1)`,
     textAlign: "center",
@@ -71,6 +129,18 @@ const styles = (theme) => ({
       display: "inline-block",
       padding: "0.5rem 1.4rem",
       textTransform: "uppercase",
+      "@media only screen and (max-width: 1440px)": {
+        padding: "0.4rem 1.3rem",
+      },
+      "@media only screen and (max-width: 414px)": {
+        padding: "0.3rem 1.2rem",
+      },
+      "@media only screen and (max-width: 360px)": {
+        padding: "0.2rem 1.1rem",
+      },
+      "@media only screen and (max-width: 280px)": {
+        padding: "0.1rem 0.8rem",
+      },
     },
     "&:hover": {
       textDecoration: "none",

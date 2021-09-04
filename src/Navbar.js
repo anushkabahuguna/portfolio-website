@@ -21,7 +21,7 @@ const screenStyle = {
 };
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
-  height: 34,
+  height: 30,
   padding: 7,
   "& .MuiSwitch-switchBase": {
     margin: 1,
@@ -29,7 +29,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     transform: "translateX(6px)",
     "&.Mui-checked": {
       color: "#fff",
-      transform: "translateX(22px)",
+      transform: "translateX(26px)",
       "& .MuiSwitch-thumb:before": {
         backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 20 20"><path fill="${encodeURIComponent(
           "#fff"
@@ -43,8 +43,8 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
   "& .MuiSwitch-thumb": {
     backgroundColor: theme.palette.mode === "dark" ? "#003892" : "#001e3c",
-    width: 32,
-    height: 32,
+    width: 28,
+    height: 28,
     "&:before": {
       content: "''",
       position: "absolute",

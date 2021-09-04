@@ -37,6 +37,9 @@ const styles = makeStyles(() => ({
 
     textAlign: "right",
     fontWeight: "600",
+    "@media only screen and (max-width:414px)": {
+      fontSize: "0.7rem",
+    },
   },
 }));
 export default styles;

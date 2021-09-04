@@ -85,6 +85,9 @@ const styles = makeStyles((theme) => ({
     fontSize: "1.1rem",
     width: "60%",
     height: "70%",
+    "@media only screen and (max-width: 1024px)": {
+      width: "80%",
+    },
 
     // backgroundColor: "orange",
   },
@@ -95,7 +98,19 @@ const styles = makeStyles((theme) => ({
     animation: "$headingEffect 1s",
     opacity: 1,
     textShadow: (isDarkTheme) =>
-      isDarkTheme ? "none" : `0 0 18px rgba(0, 0, 0, 0.3)`,
+      isDarkTheme ? "none" : `0 0 18px rgba(0, 0, 0, 0.29)`,
+    "@media only screen and (max-width: 375px)": {
+      fontSize: "3.2rem",
+    },
+    "@media only screen and (max-width: 360px)": {
+      fontSize: "3rem",
+    },
+    "@media only screen and (max-width: 320px)": {
+      fontSize: "2.5rem",
+    },
+    "@media only screen and (max-width: 280px)": {
+      fontSize: "2.1rem",
+    },
   },
   description: {
     // backgroundColor: "red",
@@ -107,6 +122,9 @@ const styles = makeStyles((theme) => ({
 
     "& p ": {
       margin: "1rem auto",
+    },
+    "@media only screen and (max-width: 414px)": {
+      fontSize: "0.65rem",
     },
   },
   divider: {
@@ -121,7 +139,6 @@ const styles = makeStyles((theme) => ({
       // backgroundColor: "grey",
       padding: "2rem 0",
       [theme.breakpoints.down("lg")]: {
-        // fontSize: "1rem",
         // backgroundColor: "pink",
       },
       [theme.breakpoints.down("md")]: {
@@ -144,6 +161,9 @@ const styles = makeStyles((theme) => ({
         textTransform: "uppercase",
         letterSpacing: "0.15rem",
         margin: "auto 0",
+        "@media only screen and (max-width: 360px)": {
+          fontSize: "0.9rem",
+        },
       },
       "&>div:nth-of-type(2)": {
         // backgroundColor: "blue",
@@ -154,6 +174,9 @@ const styles = makeStyles((theme) => ({
         margin: "auto 2rem",
         [theme.breakpoints.down("md")]: {
           margin: "0",
+        },
+        "@media only screen and (max-width:414px)": {
+          fontSize: "0.7rem",
         },
       },
     },

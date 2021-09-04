@@ -32,6 +32,9 @@ const styles = makeStyles(() => ({
     fontWeight: "bold",
     color: (isDarkTheme) => (isDarkTheme ? "#ccd6f6" : "#233554"),
     // backgroundColor: "red",
+    "@media only screen and (max-width:414px)": {
+      fontSize: "0.7rem",
+    },
   },
   image: {
     // backgroundColor: "pink",
