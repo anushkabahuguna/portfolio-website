@@ -125,24 +125,6 @@ export const projects = [
     images: [cggOne, cggTwo],
     tags: ["HTML", "CSS", "JavaScript"],
   },
-  {
-    id: "lights-out",
-    name: "Lights Out",
-    description: {
-      introduction:
-        "The goal of this game is to switch of all the lights by cliking any number of cells. Modified to add any number of rows/columns.",
-      ending:
-        "Apart from implementing the logic of the game, I learned how to handle events in React.",
-    },
-    summary: "Clone of the 'Lights Out' game",
-    webLink: "https://anushkabahuguna.github.io/lights-out/",
-    gitHubLink: "https://github.com/anushkabahuguna/lights-out",
-    startDate: "09/06/2021",
-    endDate: "14/06/2021",
-    // array of images or one image or gifs
-    images: [loOne, loTwo],
-    tags: ["HTML/CSS", "React"],
-  },
 ];
 
 export const services = [
