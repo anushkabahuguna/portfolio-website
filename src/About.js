@@ -1,28 +1,26 @@
 import React, { useRef } from "react";
-import AboutTimeline from "./AboutTimeline";
 import { useTheme, ThemeProvider } from "@material-ui/core/styles";
-import { useStore } from "./contexts/theme.context";
+import { Link } from "react-router-dom";
+import { animated, useSpring } from "react-spring";
+import AboutTimeline from "./AboutTimeline";
 import Skills from "./Skills";
 import Services from "./Services";
-import { Link } from "react-router-dom";
+import { useStore } from "./contexts/theme.context";
+import useOnScreen from "./utils/useOnScreen";
+import styles from "./styles/AboutStyles";
+import "./About.css";
 import myImage from "./assests/images/myImage.jpg";
 import resume from "./data/resume.pdf";
-import styles from "./styles/AboutStyles";
-import { animated, useSpring } from "react-spring";
-import useOnScreen from "./utils/useOnScreen";
 
-import "./About.css";
 function About({ services }) {
   const { isDarkTheme } = useStore();
   const classes = styles(isDarkTheme);
   const theme = useTheme();
-
   const eduRef = useRef(0);
   const setAnimation = () => {
     eduRef.current.classList.add(`animation1`);
   };
   const onEduScreen = useOnScreen(eduRef);
-
   let spring = useSpring({
     to: {
       opacity: 1,
@@ -34,7 +32,6 @@ function About({ services }) {
     delay: 200,
     config: { frequency: 2 },
   });
-
   let spring2 = useSpring({
     to: {
       opacity: 1,
@@ -46,7 +43,6 @@ function About({ services }) {
     delay: 200,
     config: { frequency: 1 },
   });
-
   let photoSpring = useSpring({
     to: {
       opacity: 1,

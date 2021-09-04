@@ -1,10 +1,10 @@
 import React from "react";
 import { useTheme, ThemeProvider } from "@material-ui/core/styles";
-import { useStore } from "./contexts/theme.context";
 import { Divider } from "@material-ui/core/";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LanguageIcon from "@material-ui/icons/Language";
 import { Link } from "@material-ui/core";
+import { useStore } from "./contexts/theme.context";
 import styles from "./styles/ProjectItemStyles";
 
 function ProjectItem({

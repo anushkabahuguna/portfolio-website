@@ -1,27 +1,28 @@
 import React, { useEffect } from "react";
-import Navbar from "./Navbar";
-import ProjectList from "./ProjectList";
-import ProjectItem from "./ProjectItem";
-import Contact from "./Contact";
-import { projects, services } from "./data/info";
 // import { Switch, BrowserRouter, Route } from "react-router-dom";
 import { Switch, Route as ProjectRoute } from "react-router-dom";
 import { Navigation, Route, fade, scale } from "react-tiger-transition";
 import "react-tiger-transition/styles/main.min.css";
+import Navbar from "./Navbar";
+import ProjectList from "./ProjectList";
+import ProjectItem from "./ProjectItem";
+import Contact from "./Contact";
 import NotFound from "./NotFound";
 import About from "./About";
 import Home from "./Home";
 import useToggleState from "./hooks/useToggleState";
+import { projects, services } from "./data/info";
+
 const style = {
   height: "100%",
   width: "100%",
 };
+
 fade({
   name: "default-fade",
 });
 scale(
   // scale
-
   {
     name: "scaleUp",
     enter: {

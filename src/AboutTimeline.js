@@ -6,11 +6,11 @@ import TimelineConnector from "@material-ui/lab/TimelineConnector";
 import TimelineContent from "@material-ui/lab/TimelineContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
 import Paper from "@material-ui/core/Paper";
-import "./AboutTimeline.css";
-import useOnScreen from "./utils/useOnScreen";
-import styles from "./styles/AboutTimelineStyles";
-import { useStore } from "./contexts/theme.context";
 import { useTheme, ThemeProvider } from "@material-ui/core/styles";
+import useOnScreen from "./utils/useOnScreen";
+import { useStore } from "./contexts/theme.context";
+import "./AboutTimeline.css";
+import styles from "./styles/AboutTimelineStyles";
 
 const AboutTimeline = () => {
   const ref = useRef(0);

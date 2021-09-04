@@ -4,7 +4,6 @@ const styles = makeStyles((theme) => ({
   paper: {
     background: "none",
     // backgroundColor: "orange",
-    // position: "absolute",
     top: 0,
     display: "flex",
     // textAlign:'left',
@@ -20,7 +19,6 @@ const styles = makeStyles((theme) => ({
       textShadow: (isDarkTheme) =>
         isDarkTheme ? "none" : `0 0 18px rgba(0, 0, 0, 0.35)`,
       margin: "auto",
-
       flexBasis: "30%",
       fontSize: "2rem",
       color: (isDarkTheme) => (isDarkTheme ? "#4FC3F7" : "#01579B"),
@@ -46,15 +44,12 @@ const styles = makeStyles((theme) => ({
     flexDirection: "column",
     // whiteSpace: "nowrap",
     letterSpacing: "0.07rem",
-
     [theme.breakpoints.down("sm")]: {
       marginLeft: "0",
     },
-
     // degree name
     "&>div:first-child": {
       // backgroundColor: "brown",
-
       fontSize: "1rem",
       color: (isDarkTheme) => (isDarkTheme ? "#fcfcfc" : "#111211"),
       [theme.breakpoints.down("xs")]: {
@@ -64,7 +59,6 @@ const styles = makeStyles((theme) => ({
     //content
     "&>div:nth-of-type(2)": {
       // backgroundColor: "teal",
-
       margin: "0.7rem 0",
       fontSize: "0.7rem",
       [theme.breakpoints.down("xs")]: {

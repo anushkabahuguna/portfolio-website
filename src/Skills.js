@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
-import useProgressState from "./hooks/useProgressState";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
+import useProgressState from "./hooks/useProgressState";
 import useOnScreen from "./utils/useOnScreen";
-import styles from "./styles/SkillsStyles";
 import { useStore } from "./contexts/theme.context";
+import styles from "./styles/SkillsStyles";
 
 const Skills = () => {
   const { isDarkTheme } = useStore();

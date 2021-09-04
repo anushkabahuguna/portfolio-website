@@ -37,7 +37,6 @@ const styles = makeStyles((theme) => ({
   },
   imageHolder: {
     // backgroundColor: "yellow",
-
     flexBasis: "30%",
     margin: "auto 0",
     [theme.breakpoints.down("lg")]: {
@@ -88,7 +87,6 @@ const styles = makeStyles((theme) => ({
   },
   summaryBox: {
     // backgroundColor: "blue",
-    // flexBasis: "70%",
     width: "45%",
     margin: "auto",
     [theme.breakpoints.down("md")]: {
@@ -111,7 +109,6 @@ const styles = makeStyles((theme) => ({
     fontWeight: "600",
     textShadow: (isDarkTheme) =>
       isDarkTheme ? "none" : `0 0 18px rgba(0, 0, 0, 0.35)`,
-
     [theme.breakpoints.down("md")]: {
       // backgroundColor: "pink",
       fontSize: "2rem",
@@ -156,15 +153,12 @@ const styles = makeStyles((theme) => ({
       isDarkTheme
         ? `0 0 20px 0px rgba(0, 0, 0, 0)`
         : `0 0 20px 0px rgba(0, 0, 0, 0.35)`,
-
     backgroundColor: (isDarkTheme) => (isDarkTheme ? "#4FC3F7" : "#01579B"),
     border: (isDarkTheme) => `1px solid ${isDarkTheme ? `#4FC3F7` : `#01579B`}`,
     textDecoration: "none",
-
     transition: "all 0.3s",
     "&:hover": {
       color: (isDarkTheme) => (isDarkTheme ? "#4FC3F7" : "#01579B"),
-
       background: "none",
     },
     "@media only screen and (max-width: 414px)": {
@@ -204,7 +198,6 @@ const styles = makeStyles((theme) => ({
   eduTimeline: {
     // backgroundColor: "seagreen",
     width: "70%",
-
     margin: "1rem auto",
     [theme.breakpoints.down("md")]: {
       width: "90%",
@@ -230,7 +223,6 @@ const styles = makeStyles((theme) => ({
   skillsContainer: {
     // backgroundColor: "orange",
     //heading
-
     "&>div:first-child": {
       // backgroundColor: "red",
       margin: "0 auto",
@@ -259,7 +251,6 @@ const styles = makeStyles((theme) => ({
   contact: {
     textAlign: "center",
     textTransform: "uppercase",
-
     letterSpacing: "0.08rem",
     fontSize: "0.7rem",
     [theme.breakpoints.down("sm")]: {

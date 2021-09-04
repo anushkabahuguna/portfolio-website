@@ -25,4 +25,6 @@ src/images
 .gitignore
 src/data
 .gitignore
-
+.env
+src/Contact.js
+src/styles/ContactStyles.js

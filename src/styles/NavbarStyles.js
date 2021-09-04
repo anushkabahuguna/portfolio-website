@@ -80,14 +80,6 @@ const styles = makeStyles((theme) => ({
       transform: "translateX(0%)",
     },
   },
-  "@keyframes myEffect2": {
-    "0%": {
-      transform: "translate(-100%,0%)",
-    },
-    "100%": {
-      transform: "translate(0,0)",
-    },
-  },
   root: {
     flexGrow: 1,
     width: "100vw",
@@ -111,14 +103,12 @@ const styles = makeStyles((theme) => ({
     position: "absolute",
     zIndex: "0",
     width: "100%",
-
     height: "100vh",
     backgroundColor: (isDarkTheme) => (isDarkTheme ? "#ebeeff" : "#112240"),
     transition: "transform 1s ease-in-out",
     transform: ` rotate(24deg) skew(-15deg) translate(-170%,0px)`,
   },
   showOverlay: {
-    // animation: `$myEffect2 2s ease-in-out`,
     transition: "all 1s ease-in-out",
     transform: "translate(0%,0%)",
     zIndex: "10",
@@ -144,7 +134,6 @@ const styles = makeStyles((theme) => ({
   },
   links: {
     // backgroundColor: "blue",
-
     height: "100%",
     alignItems: "center",
     margin: "5rem 7rem",
@@ -168,22 +157,17 @@ const styles = makeStyles((theme) => ({
         "&:hover": {
           marginLeft: "2rem",
         },
-        // margin: "0 1rem",
       },
       [theme.breakpoints.down("md")]: {
-        // backgroundColor: theme.palette.secondary.main,
         fontSize: "5rem",
-        // margin: "0 2rem",
       },
       [theme.breakpoints.down("sm")]: {
         // backgroundColor: "yellow",
         fontSize: "3rem",
-        // margin: "0 3rem",
       },
       [theme.breakpoints.down("xs")]: {
         transform: "translateX(0%)",
         fontSize: "3rem",
-        // margin: "2rem 0",
       },
     },
 
@@ -191,16 +175,13 @@ const styles = makeStyles((theme) => ({
       //   backgroundColor: "black",
       animation: `$myEffecteven 2s ease-in-out`,
       transform: "translateX(60%)",
-
       "&:hover": {
         borderBottom: (isDarkTheme) =>
           `2px solid ${isDarkTheme ? `#1d1c1f` : `#fcfcfc`}`,
       },
       [theme.breakpoints.down("xs")]: {
         transform: "translateX(0%)",
-
         animation: `$myEffecteven-s 2s ease-in-out`,
-
         fontSize: "2rem",
       },
     },
@@ -225,11 +206,9 @@ const styles = makeStyles((theme) => ({
     transform: "translateY(0%)",
     zIndex: "25",
     transition: "all 1.5s ease-in-out",
-    // transitionDelay: "4s",
   },
   cancelIcon: {
     animation: `$myEffect 2s ease-in-out`,
-
     position: "fixed",
     top: 0,
     right: 0,

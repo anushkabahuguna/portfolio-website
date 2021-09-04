@@ -18,7 +18,6 @@ const styles = makeStyles(() => ({
     height: "10px",
     borderRadius: "10px",
     margin: " auto 0",
-
     // bar color
     "&>div:first-child": {
       backgroundColor: (isDarkTheme) => (isDarkTheme ? "#4FC3F7" : "#01579B"),
@@ -34,7 +33,6 @@ const styles = makeStyles(() => ({
   txt: {
     // backgroundColor: "yellow",
     color: (isDarkTheme) => (isDarkTheme ? "#ccd6f6" : "#233554"),
-
     textAlign: "right",
     fontWeight: "600",
     "@media only screen and (max-width:414px)": {

@@ -20,9 +20,7 @@ const styles = makeStyles(() => ({
   },
   item: {
     // backgroundColor: "yellow",
-    // margin: "auto 1rem",
     display: "flex",
-    // width: "fit-content",
     flexDirection: "column",
     alignItems: "center",
   },

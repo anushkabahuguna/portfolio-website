@@ -22,7 +22,6 @@ const styles = makeStyles((theme) => ({
   container: {
     // backgroundColor: "#ef1234",
     width: "80%",
-
     height: "100%",
     margin: "0 auto",
     display: "flex",
@@ -36,7 +35,6 @@ const styles = makeStyles((theme) => ({
   },
   headingContainer: {
     // backgroundColor: "blue",
-
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
@@ -50,12 +48,10 @@ const styles = makeStyles((theme) => ({
     color: (isDarkTheme) => (isDarkTheme ? "#81D4FA" : "#01579B"),
     fontFamily: "Work Sans, sans-serif",
     "&>div": {
-      // textDecoration: "underline",
       paddingBottom: "1.2rem",
       borderBottom: (isDarkTheme) =>
         `10px solid ${isDarkTheme ? `#81D4FA` : "#01579B"}`,
       // backgroundColor: "black",
-      // textUnderlineOffset: "3px",
       margin: "4rem 0",
     },
     [theme.breakpoints.down("md")]: {
@@ -78,10 +74,8 @@ const styles = makeStyles((theme) => ({
     // backgroundColor: "orange",
     alignSelf: "flex-start",
     marginLeft: "5rem",
-
     "& a": {
       color: (isDarkTheme) => (isDarkTheme ? "#ccd6f6" : "#233554"),
-
       padding: " 0.4rem 1rem",
       transition: "all 0.2s ease-in",
       border: "2px dashed transparent",
@@ -136,7 +130,6 @@ const styles = makeStyles((theme) => ({
   select: {
     borderBottom: "3px solid black",
     padding: "0.5rem 0.5rem",
-
     height: "100%",
     color: "black",
     width: "100%",
@@ -183,11 +176,6 @@ const styles = makeStyles((theme) => ({
   },
   snackbar: {
     padding: 0,
-    "&>div:nth-child(1)": {
-      // borderRadius: 0,
-      // backgroundColor,
-      // backgroundColor: "transparent",
-    },
   },
 }));
 

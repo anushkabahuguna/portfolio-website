@@ -1,9 +1,9 @@
 import React from "react";
-import ProjectMiniItem from "./ProjectMiniItem";
 import { withStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
-import styles from "./styles/ProjectListStyles";
 import { animated, useSprings } from "react-spring";
+import { Grid } from "@material-ui/core";
+import ProjectMiniItem from "./ProjectMiniItem";
+import styles from "./styles/ProjectListStyles";
 
 const delay = 250;
 

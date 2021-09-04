@@ -18,7 +18,6 @@ const styles = makeStyles((theme) => ({
     },
     "100%": {
       top: "-100%",
-
       display: "none",
     },
   },
@@ -33,7 +32,6 @@ const styles = makeStyles((theme) => ({
   "@keyframes headingEffect": {
     "0%": {
       opacity: 0,
-
       transform: `translateZ(-300px) translateY(-200px)`,
     },
     "40%": {
@@ -81,14 +79,12 @@ const styles = makeStyles((theme) => ({
     transform: "translateY(10rem)",
     margin: "0 auto ",
     animation: `$myEffect3  3s  ease-in-out`,
-
     fontSize: "1.1rem",
     width: "60%",
     height: "70%",
     "@media only screen and (max-width: 1024px)": {
       width: "80%",
     },
-
     // backgroundColor: "orange",
   },
   title: {
@@ -119,8 +115,7 @@ const styles = makeStyles((theme) => ({
     marginTop: "2rem",
     lineHeight: "1.5rem",
     letterSpacing: "0.09rem",
-
-    "& p ": {
+    "& p": {
       margin: "1rem auto",
     },
     "@media only screen and (max-width: 414px)": {
@@ -154,7 +149,6 @@ const styles = makeStyles((theme) => ({
         minWidth: "9rem",
         textShadow: (isDarkTheme) =>
           isDarkTheme ? "none" : `0 0 18px rgba(0, 0, 0, 0.25)`,
-
         color: (isDarkTheme) => (isDarkTheme ? "#4FC3F7" : "#01579B"),
         fontSize: "1.1rem",
         fontWeight: "600",
@@ -167,7 +161,6 @@ const styles = makeStyles((theme) => ({
       },
       "&>div:nth-of-type(2)": {
         // backgroundColor: "blue",
-
         minWidth: "9rem",
         fontSize: "0.8rem",
         display: "flex",
@@ -205,9 +198,6 @@ const styles = makeStyles((theme) => ({
     "&:hover": {
       color: (isDarkTheme) => (isDarkTheme ? "#4FC3F7" : "#01579B"),
     },
-  },
-  images: {
-    // backgroundColor: "red",
   },
   imageHolder: {
     overflow: "hidden",

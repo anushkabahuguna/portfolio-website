@@ -1,18 +1,18 @@
 import React from "react";
 import { AppBar, Toolbar, IconButton } from "@material-ui/core";
 import { withRouter } from "react-router";
-import MenuIcon from "@material-ui/icons/Menu";
-import { extractTitle } from "./utils/extractTitle";
-import CancelIcon from "@material-ui/icons/Cancel";
-// import { Link } from "react-router-dom";
-import styles from "./styles/NavbarStyles";
-import { Link } from "react-tiger-transition";
 import { useTheme, ThemeProvider } from "@material-ui/core/styles";
-import { useStore } from "./contexts/theme.context";
+import CancelIcon from "@material-ui/icons/Cancel";
+import MenuIcon from "@material-ui/icons/Menu";
 import { styled } from "@material-ui/core/styles";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Switch from "@material-ui/core/Switch";
+import { Link } from "react-tiger-transition";
+// import { Link } from "react-router-dom";
+import { useStore } from "./contexts/theme.context";
+import { extractTitle } from "./utils/extractTitle";
+import styles from "./styles/NavbarStyles";
 
 const screenStyle = {
   display: "flex",

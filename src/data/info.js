@@ -32,7 +32,6 @@ export const projects = [
     gitHubLink: "https://github.com/anushkabahuguna/react-colors-app",
     startDate: "01/07/2021",
     endDate: "26/07/2021",
-    // array of images or one image or gifs
     images: [cpgOne, cpgTwo, cpgFour, cpgThree],
     tags: ["React", "JSS", "React Router", "Material-UI"],
   },
@@ -50,7 +49,6 @@ export const projects = [
     gitHubLink: "https://github.com/anushkabahuguna/YelpCamp",
     startDate: "05/07/2020",
     endDate: "03/09/2020",
-    // array of images or one image or gifs
     images: [ycOne, ycTwo, ycThree, ycFour],
     tags: ["Node/Express", "CRUD", "MongoDB", "MapBox API"],
   },
@@ -68,7 +66,6 @@ export const projects = [
     gitHubLink: "https://github.com/anushkabahuguna/dad-jokes-app",
     startDate: "01/07/2021",
     endDate: "04/07/2021",
-    // array of images or one image or gifs
     images: [jgOne, jgTwo],
     tags: ["React", "Jokes API"],
   },
@@ -86,7 +83,6 @@ export const projects = [
     gitHubLink: "https://github.com/anushkabahuguna/lights-out",
     startDate: "09/06/2021",
     endDate: "14/06/2021",
-    // array of images or one image or gifs
     images: [loOne, loTwo],
     tags: ["HTML/CSS", "React"],
   },
@@ -104,7 +100,6 @@ export const projects = [
     gitHubLink: "https://github.com/anushkabahuguna/hangman",
     startDate: "11/06/2021",
     endDate: "13/06/2021",
-    // array of images or one image or gifs
     images: [hmOne, hmTwo],
     tags: ["HTML/CSS", "React"],
   },
@@ -121,7 +116,6 @@ export const projects = [
     gitHubLink: "https://github.com/anushkabahuguna/color_game_website",
     startDate: "12/04/2020",
     endDate: "14/04/2020",
-    // array of images or one image or gifs
     images: [cggOne, cggTwo],
     tags: ["HTML", "CSS", "JavaScript"],
   },

@@ -50,11 +50,9 @@ const styles = makeStyles((theme) => ({
     left: 0,
     right: 0,
     margin: `auto `,
-    // height: "50%",
     top: "35%",
-
     opacity: 1,
-    width: `fit-content` /* Need a specific value to work */,
+    width: `fit-content`,
     [theme.breakpoints.down("xs")]: {
       width: "80%",
     },
@@ -64,7 +62,6 @@ const styles = makeStyles((theme) => ({
   },
   topHeadings: {
     // backgroundColor: "pink",
-
     "&::before": {
       content: "''",
       display: `block`,
@@ -116,9 +113,8 @@ const styles = makeStyles((theme) => ({
       width: `100%`,
       height: `3px`,
       backgroundColor: (isDarkTheme) => (isDarkTheme ? "#ccd6f6" : "#233554"),
-
       left: `0px`,
-      // change this bottm when marginTop changes of links
+      // change this bottom when marginTop(links) changes
       bottom: `45%`,
       position: `absolute`,
       animation: "$increaseWidth 2s",
@@ -162,7 +158,6 @@ const styles = makeStyles((theme) => ({
         cursor: "pointer",
         color: (isDarkTheme) => (isDarkTheme ? "#111211" : "#fcfcfc"),
       },
-
       padding: "0.4rem 1.7rem",
       [theme.breakpoints.down("xs")]: {
         fontSize: "0.5rem",

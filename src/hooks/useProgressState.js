@@ -2,12 +2,6 @@ import { useState } from "react";
 
 export default function useProgressState(value) {
   const [progress, setProgress] = useState(0);
-  // useEffect(() => {
-
-  //   setTimeout(() => {
-  //     clearInterval(timer);
-  //   }, 1000);
-  // }, [progress]);
   const setTimer = () => {
     const timer = setInterval(() => {
       setProgress((prevProgress) =>

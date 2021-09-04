@@ -1,4 +1,4 @@
-const styles = (theme) => ({
+const styles = () => ({
   root: {
     fontFamily: `'Poppins', sans-serif`,
     height: "100%",

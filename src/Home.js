@@ -1,10 +1,11 @@
 import React from "react";
-import { useTheme, ThemeProvider } from "@material-ui/core/styles";
-import { useStore } from "./contexts/theme.context";
-import styles from "./styles/HomeStyles";
 import Particles from "react-particles-js";
+import { useTheme, ThemeProvider } from "@material-ui/core/styles";
 // import { Link } from "react-router-dom";
 import { Link } from "react-tiger-transition";
+import { useStore } from "./contexts/theme.context";
+import styles from "./styles/HomeStyles";
+
 function Home() {
   const { isDarkTheme } = useStore();
   const classes = styles(isDarkTheme);

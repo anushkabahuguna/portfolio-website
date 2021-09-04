@@ -1,21 +1,20 @@
 import React, { useRef } from "react";
 import { useTheme, ThemeProvider } from "@material-ui/core/styles";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
-import useInputState from "./hooks/useInputState";
 import axios from "axios";
 import { MenuItem, Select, Snackbar } from "@material-ui/core";
 import MailIcon from "@material-ui/icons/Mail";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import { Link } from "@material-ui/core";
+import useInputState from "./hooks/useInputState";
 import useToggleState from "./hooks/useToggleState";
-import styles from "./styles/ContactStyles";
 import useOnScreen from "./utils/useOnScreen";
 import { useStore } from "./contexts/theme.context";
+import styles from "./styles/ContactStyles";
 import "./Contact.css";
 
 function Contact() {
   const { isDarkTheme } = useStore();
-
   const inputEl = useRef("form");
   const formRef = useRef(0);
   const classes = styles(isDarkTheme);
@@ -39,14 +38,9 @@ function Contact() {
       email,
       message,
     };
-    axios
-      .post(
-        "https://sheet.best/api/sheets/95fc9b7b-916b-4544-92fc-c1803df26549",
-        obj
-      )
-      .then((response) => {
-        toggleIsSubmitted();
-      });
+    axios.post(process.env.REACT_APP_BASE_URL, obj).then(() => {
+      toggleIsSubmitted();
+    });
     resetEmail();
     resetName();
     resetMessage();
