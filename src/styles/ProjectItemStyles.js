@@ -96,10 +96,7 @@ const styles = makeStyles((theme) => ({
     textShadow: (isDarkTheme) =>
       isDarkTheme ? "none" : `0 0 18px rgba(0, 0, 0, 0.29)`,
     "@media only screen and (max-width: 375px)": {
-      fontSize: "3.2rem",
-    },
-    "@media only screen and (max-width: 360px)": {
-      fontSize: "3rem",
+      fontSize: "2.7rem",
     },
     "@media only screen and (max-width: 320px)": {
       fontSize: "2.5rem",
@@ -119,7 +116,7 @@ const styles = makeStyles((theme) => ({
       margin: "1rem auto",
     },
     "@media only screen and (max-width: 414px)": {
-      fontSize: "0.65rem",
+      fontSize: "0.8rem",
     },
   },
   divider: {
@@ -169,7 +166,7 @@ const styles = makeStyles((theme) => ({
           margin: "0",
         },
         "@media only screen and (max-width:414px)": {
-          fontSize: "0.7rem",
+          fontSize: "0.8rem",
         },
       },
     },

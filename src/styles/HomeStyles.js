@@ -160,7 +160,7 @@ const styles = makeStyles((theme) => ({
       },
       padding: "0.4rem 1.7rem",
       [theme.breakpoints.down("xs")]: {
-        fontSize: "0.5rem",
+        fontSize: "0.7rem",
         padding: "0.4rem 1.3rem",
       },
     },
