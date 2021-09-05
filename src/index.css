@@ -5,27 +5,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
-@font-face {
-  font-family: "Saol Display Regular";
-  src: url("assests/fonts/@font-face/4c4c08af466e9ad071b6d69cf44093df.eot");
-  /* IE9*/
-  src: url("assests/fonts/@font-face/4c4c08af466e9ad071b6d69cf44093df.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */
-    url("assests/fonts/@font-face/4c4c08af466e9ad071b6d69cf44093df.woff2") format("woff2"),
-    /* chrome、firefox */
-    url("assests/fonts/@font-face/4c4c08af466e9ad071b6d69cf44093df.woff") format("woff"),
-    /* chrome、firefox */
-    url("assests/fonts/@font-face/4c4c08af466e9ad071b6d69cf44093df.ttf") format("truetype"),
-    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url("assests/fonts/@font-face/4c4c08af466e9ad071b6d69cf44093df.svg") format("svg");
-  /* iOS 4.1- */
-}
-
 /* @font-face {
+  font-family: "Saol Display Regular";
+  src: url("assests/fonts/@font-face/4c4c08af466e9ad071b6d69cf44093df.eot"); */
+/* IE9*/
+/* src: url("assests/fonts/@font-face/4c4c08af466e9ad071b6d69cf44093df.eot?#iefix") format("embedded-opentype"), */
+/* IE6-IE8 */
+/* url("assests/fonts/@font-face/4c4c08af466e9ad071b6d69cf44093df.woff2") format("woff2"), */
+/* chrome、firefox */
+/* url("assests/fonts/@font-face/4c4c08af466e9ad071b6d69cf44093df.woff") format("woff"), */
+/* chrome、firefox */
+/* url("assests/fonts/@font-face/4c4c08af466e9ad071b6d69cf44093df.ttf") format("truetype"), */
+/* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+/* url("assests/fonts/@font-face/4c4c08af466e9ad071b6d69cf44093df.svg") format("svg"); */
+/* iOS 4.1- */
+/* } */
+
+@font-face {
   font-family: "Saol Display Regular";
   src: url("https://db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.eot");
   src: url("https://db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.woff") format("woff"), url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.svg#Saol Display Regular") format("svg");
-} */
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
