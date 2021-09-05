@@ -516,15 +516,18 @@ function Home() {
             <div className={classes.des}>Web Developer | Graphic Designer</div>
           </div>
           <div className={classes.links}>
-            <Link to="/about" transition="scaleUp">
+            <Link to={`${process.env.PUBLIC_URL}/about`} transition="scaleUp">
               About
             </Link>
 
-            <Link to="/projects" transition="scaleUp">
+            <Link
+              to={`${process.env.PUBLIC_URL}/projects`}
+              transition="scaleUp"
+            >
               Projects
             </Link>
 
-            <Link to="/contact" transition="scaleUp">
+            <Link to={`${process.env.PUBLIC_URL}/contact`} transition="scaleUp">
               Contact
             </Link>
           </div>

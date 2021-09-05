@@ -17,7 +17,10 @@ function ProjectMiniItem({ id, name, summary, images, classes }) {
         </div>
         {/* // replace with link router link */}
         <div className={classes.btn}>
-          <Link to={`/projects/${id}`} transition="default-fade">
+          <Link
+            to={`${process.env.PUBLIC_URL}/projects/${id}`}
+            transition="default-fade"
+          >
             Click me
           </Link>
         </div>

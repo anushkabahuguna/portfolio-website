@@ -1,7 +1,7 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
-import "./NotFound.css";
-function NotFound() {
+import "./Loading.css";
+function Loading() {
   const { number } = useSpring({
     reset: false,
     reverse: false,
@@ -22,4 +22,4 @@ function NotFound() {
   );
 }
 
-export default NotFound;
+export default Loading;

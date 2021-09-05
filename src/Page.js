@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 import ProjectList from "./ProjectList";
 import ProjectItem from "./ProjectItem";
 import Contact from "./Contact";
-import NotFound from "./NotFound";
+import Loading from "./Loading";
 import About from "./About";
 import Home from "./Home";
 import useToggleState from "./hooks/useToggleState";
@@ -63,28 +63,32 @@ function Page() {
           <Switch>
             <Navigation>
               <Navbar />
-              <Route exact path="/projects">
+              <Route exact path={`${process.env.PUBLIC_URL}/projects`}>
                 <ProjectList projects={projects} />
               </Route>
-              <Route exact path="/about" key="/about">
+              <Route
+                exact
+                path={`${process.env.PUBLIC_URL}/about`}
+                key="/about"
+              >
                 <About services={services} />
               </Route>
               <ProjectRoute
                 exact
-                path="/projects/:id"
+                path={`${process.env.PUBLIC_URL}/projects/:id`}
                 render={(routeProps) => checkId(routeProps.match.params.id)}
               ></ProjectRoute>
-              <Route exact path="/contact">
+              <Route exact path={`${process.env.PUBLIC_URL}/contact`}>
                 <Contact />
               </Route>
-              <Route exact path="/">
+              <Route exact path={`${process.env.PUBLIC_URL}/`}>
                 <Home />
               </Route>
             </Navigation>
           </Switch>
         </div>
       ) : (
-        <NotFound />
+        <Loading />
       )}
     </>
   );

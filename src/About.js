@@ -115,7 +115,7 @@ function About({ services }) {
             </div>
           </div>
           <div className={classes.contact}>
-            <Link to="/contact">Contact me</Link>
+            <Link to={`${process.env.PUBLIC_URL}/contact`}>Contact me</Link>
           </div>
         </div>
       </div>

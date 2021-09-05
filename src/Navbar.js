@@ -70,9 +70,10 @@ function Navbar({ history }) {
   const classes = styles(isDarkTheme);
   const theme = useTheme();
   const title = extractTitle(history.location.pathname);
-  if (title.length === 0) {
-    title[0] = "Home";
+  if (title.length === 1) {
+    title.push("Home");
   }
+  // console.log(title);
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
@@ -141,10 +142,12 @@ function Navbar({ history }) {
                   className={classes.link}
                   transition="scaleUp"
                   key={index}
-                  to={`/${link === "Home" ? `` : `${link.toLowerCase()}`}`}
+                  to={`${process.env.PUBLIC_URL}/${
+                    link === "Home" ? `` : `${link.toLowerCase()}`
+                  }`}
                   onClick={handleClose}
                   style={
-                    link === title[0]
+                    link === title[1]
                       ? {
                           color: `${isDarkTheme ? `#303F9F` : `#c4cdff`}`,
                           ...screenStyle,
