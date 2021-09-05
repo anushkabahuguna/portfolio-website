@@ -116,7 +116,8 @@ const styles = makeStyles((theme) => ({
       margin: "1rem auto",
     },
     "@media only screen and (max-width: 414px)": {
-      fontSize: "0.8rem",
+      fontSize: "1rem",
+      lineHeight: "1.9rem",
     },
   },
   divider: {
@@ -166,7 +167,7 @@ const styles = makeStyles((theme) => ({
           margin: "0",
         },
         "@media only screen and (max-width:414px)": {
-          fontSize: "0.8rem",
+          fontSize: "0.9rem",
         },
       },
     },
