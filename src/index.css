@@ -8,6 +8,8 @@
 
 @font-face {
   font-family: "Saol Display Regular";
+  src: url("https://db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.woff");
+  src: url("https://db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.woff2");
   src: url("https://db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.eot");
   src: url("https://db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.woff") format("woff"), url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.svg#Saol Display Regular") format("svg");
 }
