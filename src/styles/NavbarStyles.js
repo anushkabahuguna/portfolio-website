@@ -116,7 +116,7 @@ const styles = makeStyles((theme) => ({
   },
   hideOverlay: {},
   cMsg: {
-    fontFamily: "Saol Display Regular",
+    fontFamily: `"Saol Display Regular","Playfair Display"`,
     position: "fixed",
     // backgroundColor: "red",
     left: "0",
