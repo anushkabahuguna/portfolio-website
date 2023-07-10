@@ -37,11 +37,35 @@ const AboutTimeline = () => {
               </TimelineSeparator>
               <TimelineContent>
                 <Paper className={classes.paper}>
+                  <div>2025</div>
+                  <div className={classes.eduContent}>
+                    <div>Master of Computer Application (MCA)</div>
+                    <div>
+                      <div>
+                        National Institute of Technology, Warangal, Telangana,
+                        <br /> CGPA 8.39
+                      </div>
+                      <div>(2022 - 2025) </div>
+                    </div>
+                  </div>
+                </Paper>
+              </TimelineContent>
+            </TimelineItem>
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineDot variant="outlined" className={classes.dot} />
+                <TimelineConnector style={style} />
+              </TimelineSeparator>
+              <TimelineContent>
+                <Paper className={classes.paper}>
                   <div>2022</div>
                   <div className={classes.eduContent}>
                     <div>B.Sc (Hons.) in Computer Science</div>
                     <div>
-                      <div>Hansraj College, Delhi University, CGPA 9.55</div>
+                      <div>
+                        Hansraj College, Delhi University
+                        <br /> CGPA 9.55
+                      </div>
                       <div>(2019 - 2022) </div>
                     </div>
                   </div>
@@ -62,7 +86,10 @@ const AboutTimeline = () => {
                   >
                     <div>AISSCE</div>
                     <div>
-                      <div>DPS Vasant Kunj, Delhi, 96.6%</div>
+                      <div>
+                        DPS Vasant Kunj, Delhi
+                        <br /> 96.6%
+                      </div>
                       <div>(2017 - 2019) </div>
                     </div>
                   </div>
@@ -83,7 +110,11 @@ const AboutTimeline = () => {
                   <div className={classes.eduContent}>
                     <div>AISCE</div>
                     <div>
-                      <div>CJM Waverley, Mussoorie, CGPA 10</div>
+                      <div>
+                        CJM Waverley, Mussoorie
+                        <br />
+                        CGPA 10
+                      </div>
                       <div>(2015 - 2017) </div>
                     </div>
                   </div>

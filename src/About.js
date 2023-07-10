@@ -69,10 +69,10 @@ function About({ services }) {
               </animated.div>
               <animated.div className={classes.summaryContent} style={spring2}>
                 <div>
-                  Hello, my name is Anushka Bahuguna. I live in Dehradun,
-                  Uttarakhand. I am currently pursuing B.Sc. (Hons.) in Computer
-                  Science at Hansraj College (Delhi University). I am passionate
-                  about web and graphic designing.
+                  Hello, my name is Anushka Bahuguna. I live in Garhwal,
+                  Uttarakhand. I am currently pursuing MCA at NIT Warangal,
+                  Telangana.
+                  <br /> I am passionate about web and graphic designing.
                 </div>
                 <div>
                   In my spare time, I enjoy doing photography and reading

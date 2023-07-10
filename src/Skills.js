@@ -12,13 +12,13 @@ const Skills = () => {
   const classes = styles(isDarkTheme);
   const ref = useRef(0);
   const setAnimation = () => {
-    setEightyTimer();
+    setSeventyTimer();
     setSixtyTimer();
     setFourtyTimer();
     setTwentyTimer();
   };
   const onScreen = useOnScreen(ref);
-  const [eighty, setEightyTimer] = useProgressState(80);
+  const [seventy, setSeventyTimer] = useProgressState(70);
   const [sixty, setSixtyTimer] = useProgressState(60);
   const [fourty, setFourtyTimer] = useProgressState(40);
   const [twenty, setTwentyTimer] = useProgressState(20);
@@ -34,17 +34,17 @@ const Skills = () => {
                 variant="body2"
                 color="textSecondary"
               >
-                C++
+                Front-End Web Development
               </Typography>
               <Typography
                 className={classes.txt}
                 variant="body2"
                 color="textSecondary"
-              >{`${Math.round(eighty)}%`}</Typography>
+              >{`${Math.round(seventy)}%`}</Typography>
             </div>
             <LinearProgress
               variant="determinate"
-              value={eighty}
+              value={seventy}
               className={classes.progress}
             />
           </Box>
@@ -55,17 +55,17 @@ const Skills = () => {
                 variant="body2"
                 color="textSecondary"
               >
-                Front-End Web Development
+                C++
               </Typography>
               <Typography
                 className={classes.txt}
                 variant="body2"
                 color="textSecondary"
-              >{`${Math.round(eighty)}%`}</Typography>
+              >{`${Math.round(sixty)}%`}</Typography>
             </div>
             <LinearProgress
               variant="determinate"
-              value={eighty}
+              value={sixty}
               className={classes.progress}
             />
           </Box>
