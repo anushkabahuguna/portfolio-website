@@ -9,7 +9,7 @@ import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Switch from "@material-ui/core/Switch";
 import { Link } from "react-tiger-transition";
-// import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useStore } from "./contexts/theme.context";
 import { extractTitle } from "./utils/extractTitle";
 import styles from "./styles/NavbarStyles";
@@ -87,7 +87,7 @@ function Navbar({ history }) {
     changeTheme();
   };
   const links = ["Home", "About", "Projects", "Contact"];
-
+  let location = useLocation();
   return (
     <ThemeProvider theme={theme}>
       <div className={classes.root}>
@@ -98,7 +98,13 @@ function Navbar({ history }) {
               className={classes.menuButton}
               aria-label="menu"
               onClick={handleOpen}
-              style={{ display: title[0] === "Home" ? "none" : "" }}
+              style={{
+                display:
+                  location.pathname.length === process.env.PUBLIC_URL.length ||
+                  location.pathname.length === process.env.PUBLIC_URL.length + 1
+                    ? "none"
+                    : "",
+              }}
             >
               <MenuIcon />
             </IconButton>

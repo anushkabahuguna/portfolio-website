@@ -1,7 +1,6 @@
 import React from "react";
 import Particles from "react-particles-js";
 import { useTheme, ThemeProvider } from "@material-ui/core/styles";
-// import { Link } from "react-router-dom";
 import { Link } from "react-tiger-transition";
 import { useStore } from "./contexts/theme.context";
 import styles from "./styles/HomeStyles";
